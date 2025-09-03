@@ -1,0 +1,136 @@
+# -- Main Menu --
+# The main menu is displayed in the header at the top of the page.
+# Acceptable parameters are name, pageRef, page, url, title, weight.
+# 
+# The simplest menu configuration is to provide:
+#   name = The name to be displayed for this menu link
+#   pageRef = The identifier of the page or section to link to
+#
+# By default the menu is ordered alphabetically. This can be
+# overridden by providing a weight value. The menu will then be
+# ordered by weight from lowest to highest.
+
+#[[main]]
+#  name = "Blog"
+#  pageRef = "posts"
+#  weight = 10
+
+#[[main]]
+#  name = "Parent"
+#  weight = 20
+
+#[[main]]
+#  name = "example sub-menu 1"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+#[[main]]
+#  name = "example sub-menu 2"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
+
+#[[subnavigation]]
+#  name = "An interesting topic"
+#  pageRef = "tags/interesting-topic"
+#  weight = 10
+
+#[[subnavigation]]
+#  name = "My Awesome Category"
+#  pre = "github"
+#  pageRef = "categories/awesome"
+#  weight = 20
+
+#[[main]]
+#  name = "Categories"
+#  pageRef = "categories"
+#  weight = 20
+
+#[[main]]
+#  name = "Tags"
+#  pageRef = "tags"
+#  weight = 30
+
+[[main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 1
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+
+[[main]]
+  parent = "About"
+  name = "People"
+  pageRef = "about/people"
+
+[[main]]
+  parent = "About"
+  name = "Image Copyright"
+  pageRef = "about/imagesUsed"
+
+
+[[main]]
+  name = "Systems"
+  pageRef = "systems"
+
+[[main]]
+  parent = "Systems"
+  name = "LSM800 Fish"
+  pageRef = "systems/LSM800-FISH"
+[[main]]
+  parent = "Systems"
+  name = "LSM800 Histology"
+  pageRef = "systems/LSM800-HISTOLOGY"
+[[main]]
+  parent = "Systems"
+  name = "LSM8880 Upright"
+  pageRef = "systems/LSM880-Upright"
+[[main]]
+  parent = "Systems"
+  name = "LSM880 Invert"
+  pageRef = "systems/LSM880-Invert"
+[[main]]
+  parent = "Systems"
+  name = "Ultramicroscope"
+  pageRef = "systems/ultramicroscope-blaze"
+[[main]]
+  parent = "Systems"
+  name = "AxioScan.Z1"
+  pageRef = "systems/AxioscanZ1"
+
+[[main]]
+  name = "Protocols"
+  pageRef = "protocols"
+
+[[main]]
+  parent = "Protocols"
+  name = "Map Network Drive"
+  pageRef = "protocols/map-network-drive"
+
+[[main]]
+  name = "Training"
+  pageRef = "training"
+
+[[main]]
+  name = "News"
+  pageRef = "news"
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+
+[[footer]]
+  name = "Fiji"
+  url = "https://Fiji.sc"
+  weight = 10
+    
+
+
+# [[footer]]
+#   name = "Categories"
+#   pageRef = "categories"
+#   weight = 20
