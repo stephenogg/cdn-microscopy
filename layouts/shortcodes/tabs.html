@@ -1,0 +1,61 @@
+{{/* Generate a unique ID for this tab block to allow multiple tab groups per page */}}
+{{ $uid := delimit (shuffle (seq 1000 9999)) "" }}
+
+{{ $tabs := .Params.tabs }}
+<div class="blowfish-tabs" data-tabs="{{ $uid }}">
+  <div class="tab-headers flex border-b border-gray-300 dark:border-gray-600 mb-4 space-x-4">
+    {{ range $index, $tab := $tabs }}
+      <button class="tab-header text-sm font-medium text-gray-600 dark:text-gray-300 px-3 py-2 border-b-2 border-transparent hover:text-gray-900 dark:hover:text-white"
+              data-tab-target="{{ $uid }}-{{ $index }}">
+        {{ $tab.title }}
+      </button>
+    {{ end }}
+  </div>
+
+  <div class="tab-contents">
+    {{ range $index, $tab := $tabs }}
+      <div id="{{ $uid }}-{{ $index }}" class="tab-content hidden prose dark:prose-invert max-w-none border border-gray-300 dark:border-gray-600 rounded-b px-4 py-3 bg-white dark:bg-gray-800">
+        {{ $tab.content | markdownify }}
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-tabs]').forEach(container => {
+      const headers = container.querySelectorAll('.tab-header');
+      const uid = container.getAttribute('data-tabs');
+
+      headers.forEach(header => {
+        header.addEventListener('click', () => {
+          const targetId = header.getAttribute('data-tab-target');
+          const contents = container.querySelectorAll('.tab-content');
+
+          headers.forEach(h => h.classList.remove('active'));
+          contents.forEach(c => c.classList.remove('active'));
+
+          header.classList.add('active');
+          container.querySelector(`#${targetId}`).classList.add('active');
+        });
+      });
+
+      // Activate the first tab
+      headers[0]?.classList.add('active');
+      const firstId = headers[0]?.getAttribute('data-tab-target');
+      container.querySelector(`#${firstId}`)?.classList.add('active');
+    });
+  });
+</script>
+
+<style>
+.tab-header.active {
+  @apply text-blue-600 dark:text-blue-400 border-blue-600 dark:border-blue-400;
+}
+.tab-content.active {
+  @apply block;
+}
+.tab-content {
+  @apply hidden;
+}
+</style>

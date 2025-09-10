@@ -1,0 +1,13 @@
+{{ $title := .Get "title" }}
+
+<div class="tab flex flex-col">
+  <button class="tab-header text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 px-4 py-2 border border-transparent border-b-0 rounded-t transition-colors"></button>
+  <div class="tab-content hidden prose dark:prose-invert max-w-none border border-gray-300 dark:border-gray-600 rounded-b px-4 py-3 bg-white dark:bg-gray-800">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
+
+<script>
+  // Ensure tab header has title text
+  document.currentScript.previousElementSibling.querySelector('.tab-header').innerText = "{{ $title }}";
+</script>

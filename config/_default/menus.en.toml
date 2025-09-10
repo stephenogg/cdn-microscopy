@@ -62,15 +62,23 @@
   pageRef = "about"
 
 [[main]]
-  parent = "About"
   name = "People"
-  pageRef = "about/people"
+  pageRef = "people"
+
+[[main]]
+  parent = "People"
+  name = "Steve"
+  pageRef = "people/steve"
 
 [[main]]
   parent = "About"
   name = "Image Copyright"
   pageRef = "about/imagesUsed"
 
+[[main]]
+  parent = "About"
+  name = "Locate Us"
+  pageRef = "about/location"
 
 [[main]]
   name = "Systems"
@@ -111,12 +119,23 @@
   pageRef = "protocols/map-network-drive"
 
 [[main]]
+  parent = "Protocols"
+  name = "MacOS"
+  pageRef = "protocols/mac"
+
+[[main]]
   name = "Training"
   pageRef = "training"
 
 [[main]]
-  name = "News"
-  pageRef = "news"
+parent = "Training"
+  name = "Getting Started"
+  pageRef = "training/getting-started"
+
+[[subnavigation]]
+  name = "Click Here to Access the Facility"
+  pageRef = "training/getting-started"
+  weight = 10
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
