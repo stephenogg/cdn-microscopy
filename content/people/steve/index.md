@@ -1,9 +1,7 @@
 +++
-date = '2025-09-10T13:39:42+01:00'
+date = '2025-09-11T12:20:49+01:00'
 draft = false
 title = 'Steve'
-layout = 'simple'
-showHero = true
-heroStyle = 'background'
+layout = "simple"
 +++
-## Steve
+<img src="steve.jpg" alt="Steve" width="300"/>

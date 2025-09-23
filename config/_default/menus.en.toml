@@ -70,10 +70,6 @@
   name = "Steve"
   pageRef = "people/steve"
 
-[[main]]
-  parent = "About"
-  name = "Image Copyright"
-  pageRef = "about/imagesUsed"
 
 [[main]]
   parent = "About"
@@ -119,11 +115,6 @@
   pageRef = "protocols/map-network-drive"
 
 [[main]]
-  parent = "Protocols"
-  name = "MacOS"
-  pageRef = "protocols/mac"
-
-[[main]]
   name = "Training"
   pageRef = "training"
 
@@ -133,9 +124,12 @@ parent = "Training"
   pageRef = "training/getting-started"
 
 [[subnavigation]]
-  name = "Click Here to Access the Facility"
+  name = "Get Started"
   pageRef = "training/getting-started"
+  identifier = "Get-Started"
   weight = 10
+ 
+
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
@@ -146,6 +140,16 @@ parent = "Training"
   name = "Fiji"
   url = "https://Fiji.sc"
   weight = 10
+
+[[footer]]
+  name = "CDN"
+  url = "https://devneuro.org"
+  weight = 20
+
+[[footer]]
+  name = "King's College"
+  url = "https://kcl.ac.uk"
+  weight = 30
     
 
 

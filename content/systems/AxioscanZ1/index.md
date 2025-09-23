@@ -8,7 +8,7 @@ heroStyle = 'background'
 +++
 ## Overview
 - High Speed Brightfield and Fluorescence Slide Scanner.
-- Able to perform monochrome fluorescence or colour imaging of whole sections in a fully automated manner. 
+- Able to perform fluorescence or colour imaging of whole slides automatedly. 
 - Fluorescence Specifications:
     - 7 high powered LED light source [Zeiss Colibri](EN_product-info_Colibri-7_rel1-0.pdf) for fluorescence excitation:
         - 385nm, 430nm, 475nm, 511, 555nm, 590nm, 630nm
@@ -21,6 +21,40 @@ heroStyle = 'background'
     - Cameras:
         - Zeiss [AxioCam506 mono](EN_product-info_Axiocam-506_mono.pdf)
 
+
+
+
+
+
+
+## SOP
+Wholeslide scanning requires a different mindset than *normal* fluorescence imaging. When imaging at a confocal, the user has complete control over the parameters required to acquire an image. The goal for whole slide imaging is to offload the entire decision making process to the system. Users should be able to load the slides, select a file (Zeiss calls this a scan profile) that contains all the instructions to complete a scan, perform a preview scan, and then press the **scan** button. The system will then scan all the slides, freeing the user to perform other tasks.
+{{< columns >}}
+To accomplish this, the system needs to know basic things about the imaging, like:
+1. What type of contrast method you wish to use
+2. Objective Lens
+3. The exposure time
+4. What to call the file
+5. Where to store the file
+
+{{< column >}}
+Additionally and specifically for slide scanning, the system needs to know:
+
+6. Which part of the slide contains your sample, which part of the sample you wish to scan.
+7. How to focus the sample.
+{{< endcolumns >}}
+
+{{< columns >}}
+<br/>
+<br/>
+{{< alert icon=circle-info >}} 
+Pdf to understand concepts in whole slide scanning    --->
+{{< /alert >}}
+{{< column >}}
+<a href="axio-scanz1-application-guide.pdf"><img src="applicationGuideCover.png" alt="Application Guide" width="150px" max-width="100%" style="margin:auto"></a>
+{{< endcolumns >}}
+
+In the Zeiss Zen slide scanning software, all of these paramters are set in a file called the "scan profile". Each sample type will require its own scan profile where all the decisions for the sample on that slide are encoded. 
 
 
 
