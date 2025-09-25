@@ -6,12 +6,10 @@ title = 'Map Network Drive'
 +++
 ## Overview
 The acquisition computer filesystem is meant for *temporary* storage of data acquired by the microscopes. Part of the imaging workflow --- after acquisition --- is to manage your data. Initially this means you must move the data somewhere for permanent storage, archiving and backup. To achieve this on our acquisition systems, you mount a network share as a local drive during your session. This allows you to drag and drop your files from the local computer's hard disk drive to the network computer's hard disk drove. The process of adding a network shared drive to a local system is known as "mapping a network drive". The following instructions describe one way to mount network shared drives on microscope acquisition systems. Our acquisition systems use *Windows* as the operating system.
-
-<details>
-  <summary>{{< icon "microsoft" >}} Windows</summary>
-
 ### Prerequisites
 To mount a network shared drive, you must have access to a network shared drive (obviously). At King's, institutionally provided data storage is managed through [*King's Computational Research, Engineering and Technology Environment*](https://er.kcl.ac.uk). To request access, please fill in the form linked at [this](https://docs.er.kcl.ac.uk/research_data/rds_requesting_access/) website.
+<details>
+  <summary>{{< icon "microsoft" >}} Windows</summary>
 
 ### The Procedure
 There are several ways to successfully mount a network location as a local drive so that you can copy your data to the network drive and then delete it from the local drive. The following method uses the Windows GUI.
@@ -29,11 +27,11 @@ There are several ways to successfully mount a network location as a local drive
     - This would be my path from an acquisition system.
 
     ---
-    - ***\\\rds.er.kcl.ack.uk\prj\dn_cdn_microsocpy***
+    - ***\\\rds.er.kcl.ac.uk\prj\dn_cdn_microsocpy***
     - This would be my path from a non-acquisition Windows system.
     ---
 1. Make sure the "Connect using different credentials" tickbox *is* ticked and the "Reconnect at sign-in *is* ***NOT*** ticked.
-1. In this context, "different credentails" means different to the ones used to login to the local acquisition computer. 
+1. In this context, "different credentials" means different to the ones used to login to the local acquisition computer. 
 1. Click "Finish". This will cause a pop-up window to appear where you can add your credentials.
 
 {{< column >}}
@@ -69,7 +67,26 @@ There are several ways to successfully mount a network location as a local drive
 
 <details>
   <summary>{{< icon "apple" >}} MacOS</summary>
-  Something small enough to escape casual notice.
+  
+#### Step By Step
+{{< columns >}}
+1. With the finder active, click on ⌘+K to bring up the "Connect to Server" dialogue box.
+1. Enter the path to your RDS share in the "Server Address:" field, starting with "smb://". None of our acquisition computers runs MacOS, so you will always connect to your RDS using the following format:
+    - e.g. ***smb://rds.kcl.ac.uk/prj/dn_cdn_microsocpy***
+1. Click "Connect" to initialise the connection, which initiates the authentication process.
+1. When the authentication window appears, enter your credentials in the following format:
+    - Username: DOMAIN\username
+    - Password: Your password for that account.
+1. The RDS share should appear as a connected network shared drive.
+1. You can now treat the RDS space as if it's a local drive and drag and drop your image data to your RDS space.
+1. Shutting down or logging out of the system will automatically disconnect your RDS space. If you're using a communal computer you can also right click on the drive and select "eject" to ensure that the next person using the computer will not be able to add/delete your data. 
+{{< column >}}
+{{< figure
+    src="credentials.png"
+    default=true
+    height="50px"
+    >}}
+{{< endcolumns >}}  
 </details>
 
 <details>

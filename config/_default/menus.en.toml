@@ -134,12 +134,19 @@ parent = "Training"
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
-
+[[footer]]
+  name = "CDN Stratocore-PPMS"
+  url = "https://ppms.eu/kcl/?CDN"
+  weight = 9
 
 [[footer]]
   name = "Fiji"
   url = "https://Fiji.sc"
   weight = 10
+[[footer]]
+  name = "Image.sc"
+  url = "https://forum.image.sc/"
+  weight = 15
 
 [[footer]]
   name = "CDN"
