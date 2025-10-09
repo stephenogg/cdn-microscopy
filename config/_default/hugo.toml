@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = ["blowfish", "hugo-shortcode-roneo-collection"]
-baseURL = "https://cdn-microscopy.steveinuk.com/"
+baseURL = "https://stephenogg.github.io/cdn-microscopy/"
 defaultContentLanguage = "en"
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles

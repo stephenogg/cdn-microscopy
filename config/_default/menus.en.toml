@@ -84,22 +84,27 @@
   parent = "Systems"
   name = "LSM800 Fish"
   pageRef = "systems/LSM800-FISH"
+
 [[main]]
   parent = "Systems"
   name = "LSM800 Histology"
   pageRef = "systems/LSM800-HISTOLOGY"
+
 [[main]]
   parent = "Systems"
-  name = "LSM8880 Upright"
+  name = "LSM880 Upright"
   pageRef = "systems/LSM880-Upright"
+
 [[main]]
   parent = "Systems"
   name = "LSM880 Invert"
-  pageRef = "systems/LSM880-Invert"
+  pageRef = "systems/LSM880-Inverted"
+
 [[main]]
   parent = "Systems"
   name = "Ultramicroscope"
   pageRef = "systems/ultramicroscope-blaze"
+  
 [[main]]
   parent = "Systems"
   name = "AxioScan.Z1"

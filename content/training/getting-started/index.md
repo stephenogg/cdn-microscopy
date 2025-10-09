@@ -5,10 +5,10 @@ layout = "simple"
 
 ## Overview
 Getting started imaging with our resources requires:
-- An account in Stratocore PPMS --- for booking and billing.
-- Training --- so that you don't damage the equipment or yourself.
-- Physical Access --- so that you can get into the rooms where the microscopes live.
-- A strategy to move your image data --- to keep our acquisition computers from filling up with data and as a means for you to have access to your data.
+- **An account in Stratocore PPMS** --- for booking and billing.
+- **Training** --- so that you don't damage the equipment or yourself.
+- **Physical Access** --- so that you can get into the rooms where the microscopes live.
+- **A strategy to manage your image data** --- to keep our acquisition computers from filling up with data and as a means for you to have access to your data.
 
 ## PPMS
 Stratocore [PPMS](https://stratocore.com/), our booking and billing system, is a cloud-based management software designed for scientific core facilities and research labs, providing a centralized platform for equipment booking, training, maintenance, billing, and project tracking. The system supports various functions, from managing access to advanced resources to simplifying financial operations and ensuring compliance for researchers and facility staff.

@@ -71,27 +71,93 @@ There are several ways to successfully mount a network location as a local drive
 #### Step By Step
 {{< columns >}}
 1. With the finder active, click on ⌘+K to bring up the "Connect to Server" dialogue box.
-1. Enter the path to your RDS share in the "Server Address:" field, starting with "smb://". None of our acquisition computers runs MacOS, so you will always connect to your RDS using the following format:
+1. Enter the path to your RDS share in the "Server Address:" field, starting with "smb://"
+
+{{< alert cardColor=#3b82f6 >}}
+None of our acquisition computers runs MacOS, so you will always connect to your RDS using the following format:
+{{< /alert >}}
     - e.g. ***smb://rds.kcl.ac.uk/prj/dn_cdn_microsocpy***
+    
 1. Click "Connect" to initialise the connection, which initiates the authentication process.
 1. When the authentication window appears, enter your credentials in the following format:
-    - Username: DOMAIN\username
+    - Username: DOMAIN\username --- i.e. KCLAD/k###########
     - Password: Your password for that account.
 1. The RDS share should appear as a connected network shared drive.
 1. You can now treat the RDS space as if it's a local drive and drag and drop your image data to your RDS space.
-1. Shutting down or logging out of the system will automatically disconnect your RDS space. If you're using a communal computer you can also right click on the drive and select "eject" to ensure that the next person using the computer will not be able to add/delete your data. 
+1. Shutting down or logging out of the system will automatically disconnect your RDS space. If you're using a communal computer you can also right click on the drive and select "eject" to ensure that the next person using the computer will not be able to add/delete your data.
+1. MacOS stupidly remembers the credentials of the first person to connect to a shared drive and reuses these to connect subsequently. The only way to get the computer to forget the credentials and login to the server with different credentials is to restart.
 {{< column >}}
 {{< figure
-    src="credentials.png"
+    src="MacOSConnectToServer.png"
+    default=true
+    height="50px"
+    >}}
+{{< figure
+    src="MacOSConnect2.png"
+    default=true
+    height="50px"
+    >}}
+{{< endcolumns >}} 
+{{< columns >}}
+{{< figure
+    src="Connect3.png"
+    default=true
+    height="50px"
+    >}}
+    {{< column >}}
+{{< figure
+    src="authenticate.png"
     default=true
     height="50px"
     >}}
 {{< endcolumns >}}  
 </details>
 
-<details>
-  <summary>{{< icon "linux" >}} Linux</summary>
-  Something small enough to escape casual notice.
+ <details>
+ <summary>{{< icon "ubuntu" >}} Linux</summary>
+
+1. Open the Files application.
+{{< figure
+    src="linux/files-launch.png"
+    default=true
+    height="50px"
+    >}}
+1. Navigate to the “Other Locations” section from the sidebar menu.
+{{< figure
+    src="linux/files-main.png"
+    default=true
+    height="50px"
+    >}}
+1. Locate the network hosts under the “Networks” section or enter the host's IP address with the smb: prefix and click Connect.
+1. Enter the shared drive path in the following format:
+    - ***smb://rds.kcl.ac.uk/prj/dn_cdn_microsocpy***
+{{< figure
+    src="linux/files-other-locations.png"
+    default=true
+    height="50px"
+    >}}
+1. Choose the shared folder you wish to access.
+{{< figure
+    src="linux/files-other-locations-folders.png"
+    default=true
+    height="50px"
+    >}}
+1. Select “Connect” with Registered User selected. Enter login credentials and click Connect.
+    - Username = your username
+    - DOMAIN = KCLAD
+    - Password = your password
+
+{{< figure
+    src="linux/files-other-locations-folders-authenticate-registered.png"
+    default=true
+    height="50px"
+    >}}
+1. Access the files and folders provided by the remote host.
+
+1. Unmount the shared folder by clicking the eject icon when finished.
+{{< figure
+    src="linux/files-other-locations-folders-unmount.png"
+    default=true
+    height="50px"
+    >}}
 </details>
-
-
