@@ -6,29 +6,35 @@ layout = 'simple'
 showHero = true
 heroStyle = 'background'
 +++
+
+<details>
+  <summary>{{< icon "chevron-down" >}} Overview</summary>
+
 ## Overview
-- High Speed Brightfield and Fluorescence Slide Scanner.
-- Able to perform fluorescence or colour imaging of whole slides automatedly. 
-- Fluorescence Specifications:
-    - 7 high powered LED light source [Zeiss Colibri](EN_product-info_Colibri-7_rel1-0.pdf) for fluorescence excitation:
-        - 385nm, 430nm, 475nm, 511, 555nm, 590nm, 630nm
-    - Archetypical dye examples for each LED wavelength:
-        - DAPI, CFP, Alexa488, YFP, Alexa546, Alexa594, Cy5
-    - Fluorescence Filter Cubes:
-        - [Fs38 (GFP)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489038-9901-000), [Fs43 (DsRed)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489043-9901-000), [Fs50 (Cy5)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/488050-9901-000), [Fs96 (BFP)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489096-9100-000)
-    - Lenses:
-        - 2.5X/0.05, Fluar 5X/0.25, Plan-Apochromat 10x/0.45, Plan-Apochromat 20x/0.8, Plan-Apochromat 40X/0.95 Corr
-    - Cameras:
-        - Zeiss [AxioCam506 mono](EN_product-info_Axiocam-506_mono.pdf)
+The AxioScan.Z1 is designed to scan the entire tissue on a slide. Our system is equipped to scan in brightfield or fluorescence modes. The system has an in built magazine to hold 100 3" X 1" slides. Once configured, the system is able to perform automated scanning by performing a pre-scan, identifying the tissue on the slide, creating a focus map, and then performing a scan using the selected instructions including magnifiation, mode, channels, exposure time and data saving location. 
+
+Fluorescence Specifications:
+- 7 LED light source [Zeiss Colibri](EN_product-info_Colibri-7_rel1-0.pdf) for fluorescence excitation:
+    - wavelengths: 385nm, 430nm, 475nm, 511nm, 555nm, 590nm, 630nm
+- Fluorescence Filter Cubes:
+    - [Fs38 (GFP)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489038-9901-000)
+    - [Fs43 (DsRed)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489043-9901-000)
+    - [Fs50 (Cy5)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/488050-9901-000)
+    - [Fs96 (DAPI)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489096-9100-000)
+- Lenses:
+    - 2.5X/0.05, Fluar 5X/0.25, Plan-Apochromat 10x/0.45, Plan-Apochromat 20x/0.8, Plan-Apochromat 40X/0.95 Corr
+- Cameras:
+    - Zeiss [AxioCam506 mono](EN_product-info_Axiocam-506_mono.pdf)
+
+</details>
 
 
 
-
-
-
+<details>
+  <summary>{{< icon "chevron-down" >}} SOP</summary>
 
 ## SOP
-Wholeslide scanning requires a different mindset than *normal* fluorescence imaging. When imaging at a confocal, the user has complete control over the parameters required to acquire an image. The goal for whole slide imaging is to offload the entire decision making process to the system. Users should be able to load the slides, select a file (Zeiss calls this a scan profile) that contains all the instructions to complete a scan, perform a preview scan, and then press the **scan** button. The system will then scan all the slides, freeing the user to perform other tasks.
+Wholeslide scanning requires a different mindset than *normal* fluorescence imaging. When imaging at a confocal, the user has complete control over the parameters to acquire an image and can instantly change these, using information in the acquired data to update the acquisitionparameters. Whole slide imaging, in contrast, is completely automated. The goal is to offload the entire decision making process to the system. Users should be able to load the slides, select a file (Zeiss calls this a scan profile) that contains all the instructions to complete a scan, perform a preview scan, and then press the **scan** button. The system will then scan all the slides, freeing the user to perform other tasks.
 {{< columns >}}
 To accomplish this, the system needs to know basic things about the imaging, like:
 1. What type of contrast method you wish to use
@@ -54,8 +60,51 @@ Pdf to understand concepts in whole slide scanning    --->
 <a href="axio-scanz1-application-guide.pdf"><img src="applicationGuideCover.png" alt="Application Guide" width="150px" max-width="100%" style="margin:auto"></a>
 {{< endcolumns >}}
 
-In the Zeiss Zen slide scanning software, all of these paramters are set in a file called the "scan profile". Each sample type will require its own scan profile where all the decisions for the sample on that slide are encoded. 
+In the Zeiss Zen slide scanning software, a file called the "scan profile" contains all of the scanning information. The challenge with slide scanning is to create a robust set of scan profiles that will work for all the slides of each of your sample types. Each sample type will require its own scan profile where all the decisions for that specific type of sample on that slide(s) are encoded.
+### Step by Step --- Quickstart --- TL;DR
+{{< timeline >}}
 
+{{< timelineItem icon="1" header=" " subheader="Turn on the system" badge="start here" >}}
+<ul>
+    <li>Turn on the Scanner. Wait until you think the scanner is initialised.</li>
+    <li>Turn on the Computer. Wait until the Windows desktop appears.</li>
+    <li>Start the software. Wait until the splashscreen appears.</li>
+    <li>Click on the "ZEN Slidescan" button. Wait until the system initialises in the software.</li>
+</ul>
+{{< /timelineItem >}}
 
+{{< timelineItem icon="2" subheader="Insert your slides" >}}
+<ul>
+    <li>Place your slides into the slide carrier. Slide label must be near the silver clamp.</li>
+    <li>Press the open/close button on the scanner. Wait until the door opens.</li>
+    <li>Pull open one of the trays. It doesn't matter which one.</li>
+    <li>Place the slide carrier(s) on the tray(s), coverslip up, labels closest to you. Close the tray(s).</li>
+    <li>Press the open/close button to close the door. Wait until the system auto discovers the slide carrier(s) location(s).</li>
+    <li>You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</li>  
+</ul>
+{{< /timelineItem >}}
+{{< timelineItem icon="3" subheader="Create a scan" >}}
+<ul>
+    <li>Select the scan profile you wish to use. Each slide can have its own profile.</li>
+    <li>Push the "Preview scan" button. This creates a preview scan.</li>
+    <li>Observe teh previews to ensure the tissue has been identified correctly. Make necessary modifications.</li>
+    <li>Select the storage location. This will likely be your folder on the Data drive.</li>
+    <li>Seelect the naming definition. Commonly, date +</li>
+    <li>You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</li>  
+</ul>
+{{< /timelineItem >}}
+{{< timelineItem icon="4" subheader="Create a Scan Preview" >}}
+{{< /timelineItem >}}
+{{< timelineItem icon="5" subheader="Make Necessary Modifications" >}}
+{{< /timelineItem >}}
+{{< timelineItem icon="6" subheader="Select Storage Location & Naming Definition" >}}
+{{< /timelineItem >}}
+{{< timelineItem icon="7" subheader="Scan your slides" >}}
+{{< /timelineItem >}}
+{{< /timeline >}}
+</details>
 
-background image [{{< icon "cc-by" >}}](https://creativecommons.org/licenses/by/2.0/deed.en)
+<details>
+  <summary>{{< icon "chevron-down" >}} Creating a scan profile</summary>
+
+</details>

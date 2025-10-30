@@ -2,8 +2,8 @@
 date = '2025-08-29T09:38:42+01:00'
 draft = false
 title = 'LSM800 (aka FISH)'
-showHero = true
 layout = 'simple'
+showHero = true
 heroStyle = 'background'
 +++
 

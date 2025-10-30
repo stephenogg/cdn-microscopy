@@ -77,6 +77,11 @@
   pageRef = "about/location"
 
 [[main]]
+  parent = "About"
+  name = "Rates"
+  pageRef = "about/rates"
+
+[[main]]
   name = "Systems"
   pageRef = "systems"
 
