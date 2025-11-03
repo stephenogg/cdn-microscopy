@@ -125,6 +125,11 @@
   pageRef = "protocols/map-network-drive"
 
 [[main]]
+  parent = "Protocols"
+  name = "Coverslip Thickness"
+  pageRef = "protocols/coverslip-thickness"  
+
+[[main]]
   name = "Training"
   pageRef = "training"
 
