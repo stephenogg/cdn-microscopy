@@ -46,7 +46,7 @@ To accomplish this, the system needs to know basic things about the imaging, lik
 {{< column >}}
 Additionally and specifically for slide scanning, the system needs to know:
 
-6. Which part of the slide contains your sample, which part of the sample you wish to scan.
+6. Which part of the slide contains your sample and which part of the sample you wish to scan.
 7. How to focus the sample.
 {{< endcolumns >}}
 
@@ -83,28 +83,59 @@ In the Zeiss Zen slide scanning software, a file called the "scan profile" conta
     <li>You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</li>  
 </ul>
 {{< /timelineItem >}}
-{{< timelineItem icon="3" subheader="Create a scan" >}}
+{{< timelineItem icon="3" subheader="Create a Scan Preview" >}}
 <ul>
     <li>Select the scan profile you wish to use. Each slide can have its own profile.</li>
-    <li>Push the "Preview scan" button. This creates a preview scan.</li>
-    <li>Observe teh previews to ensure the tissue has been identified correctly. Make necessary modifications.</li>
+    <li>Push the "Preview scan" button. Wait for the preview.</li>
+    <li>Observe the previews to ensure the tissue has been identified correctly. Make any necessary modifications.</li>
     <li>Select the storage location. This will likely be your folder on the Data drive.</li>
-    <li>Seelect the naming definition. Commonly, date +</li>
-    <li>You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</li>  
+    <li>Select the naming definition. Commonly, date + serial number.</li>
 </ul>
 {{< /timelineItem >}}
-{{< timelineItem icon="4" subheader="Create a Scan Preview" >}}
-{{< /timelineItem >}}
-{{< timelineItem icon="5" subheader="Make Necessary Modifications" >}}
-{{< /timelineItem >}}
-{{< timelineItem icon="6" subheader="Select Storage Location & Naming Definition" >}}
-{{< /timelineItem >}}
-{{< timelineItem icon="7" subheader="Scan your slides" >}}
+{{< timelineItem icon="4" subheader="Scan Your Slides" >}}
+<ul>
+    <li>Press the "Scan" button.</li>
+    <li>Your scans will be saved to your chosen location.</li>
+    <li>Remember, the acquisition computer is temporary storage.</li>
+    <li>Move your image data to your RDS storage location.</li>
+</ul>
 {{< /timelineItem >}}
 {{< /timeline >}}
 </details>
 
 <details>
   <summary>{{< icon "chevron-down" >}} Creating a scan profile</summary>
+
+## Creating a Scan Profile
+Creating a scan profile is by far the most challengin part of the slide scanning workflow. There is a "Wizard" that can help you go throught the steps to create a scan profile. Briefly, the steps consist of:
+1. Naming the scan profile.
+1. Creating a "label" image.
+1. Defining the preview image parameters.
+1. Using the preview image to identify tissue sections on the slide.
+1. Creating a focus map.
+1. Defining the scan parameters.
+
+## Detailed Instructions
+{{< timeline >}}
+{{< timelineItem icon="1" header="Naming The Scan Profile" badge="Step 1" >}}
+
+{{< /timelineItem >}}
+{{< timelineItem icon="2" header="Creating a label image" badge="Step 2" >}}
+
+{{< /timelineItem >}}
+{{< timelineItem icon="3" header="Defining the preview image parameters" badge="Step 3" >}}
+
+{{< /timelineItem >}}
+{{< timelineItem icon="4" header="Tissue identification" badge="Step 4" >}}
+
+{{< /timelineItem >}}
+{{< timelineItem icon="5" header="Creating a focus map" badge="Step 5" >}}
+
+{{< /timelineItem >}}
+{{< timelineItem icon="6" header="Defining the scan parameters" badge="Step 6" >}}
+
+{{< /timelineItem >}}
+{{< /timeline >}}
+
 
 </details>

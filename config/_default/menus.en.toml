@@ -173,7 +173,16 @@ parent = "Training"
   url = "https://kcl.ac.uk"
   weight = 30
     
+[[footer]]
+  name = "MIC"
+  url = "https://www.kcl.ac.uk/research/facilities/microscopy-innovation-centre"
+  weight = 40
 
+[[footer]]
+  name = "NIC@King's"
+  url = "https://www.kcl.ac.uk/research/facilities/Nikon-Imaging-Centre"
+  weight = 50
+    
 
 # [[footer]]
 #   name = "Categories"
