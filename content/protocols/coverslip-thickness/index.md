@@ -19,7 +19,7 @@ Many modern microscopy objectives are designed for a #1.5 (or 1.5H) coverslip of
 |#4 |430–650|
 
 ## Microscope Objectives 
-One of the many pieces of information written onto every objective is the designed (or expected) coverslip thickness. On the following 40x oil immersion objectives from every major vendor, the number 0.17 can be found. This refers to 0.17mm coverslip thickness expected.
+One of the many pieces of information written onto every objective is the designed (or expected) coverslip thickness. On the following 40x oil immersion objectives from every major vendor, the number 0.17 can be found. This refers to the fact that a 0.17mm thick coverslip (of RI 1.525) was used during the design process of the lens. If you use a c/s with a different thickness, or no c/s at all, you will introduce aberrations into the image because you have not adhered to the assumptions of the lens designer.
 {{< figure
     default=true
     src="Objectives.png"

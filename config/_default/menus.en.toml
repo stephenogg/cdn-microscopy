@@ -127,7 +127,12 @@
 [[main]]
   parent = "Protocols"
   name = "Coverslip Thickness"
-  pageRef = "protocols/coverslip-thickness"  
+  pageRef = "protocols/coverslip-thickness"
+
+[[main]]
+  parent = "Protocols"
+  name = "Shading Reference"
+  pageRef = "protocols/shading-reference" 
 
 [[main]]
   name = "Training"
