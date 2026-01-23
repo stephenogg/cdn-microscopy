@@ -123,8 +123,23 @@ Creating a scan profile is by far the most challengin part of the slide scanning
 {{< timelineItem icon="2" header="Creating a label image" badge="Step 2" >}}
 
 {{< /timelineItem >}}
-{{< timelineItem icon="3" header="Defining the preview image parameters" badge="Step 3" >}}
 
+
+
+{{< timelineItem icon="3" md="true" header="Defining the preview image parameters" badge="Step 3" >}}
+> [!TIP] Information
+> For best results the red frame should cover the complete slide and some air
+around the edges. This will improve identification of areas to be used for automatic shading correction for brightfield imaging. To limit the range for the tissue detection use the red
+frame in the Tissue Detection Settings section in the subsequent step. Avoid
+placing the red frame covers the label area of the slide.
+
+{{< figure
+    src="preview.png"
+    alt="Preview Image"
+    caption="Include the entire slide within the red selection rectangle"
+    default="true"
+    width=400
+    >}}
 {{< /timelineItem >}}
 {{< timelineItem icon="4" header="Tissue identification" badge="Step 4" >}}
 

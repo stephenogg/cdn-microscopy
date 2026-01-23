@@ -5,15 +5,15 @@ layout = "simple"
 title = 'Map Network Drive'
 +++
 ## Overview
-The acquisition computer filesystem is meant for *temporary* storage of data acquired by the microscopes. Part of the imaging workflow --- after acquisition --- is to manage your data. Initially this means you must move the data somewhere for permanent storage, archiving and backup. To achieve this on our acquisition systems, you mount a network share as a local drive during your session. This allows you to drag and drop your files from the local computer's hard disk drive to the network computer's hard disk drove. The process of adding a network shared drive to a local system is known as "mapping a network drive". The following instructions describe one way to mount network shared drives on microscope acquisition systems. Our acquisition systems use *Windows* as the operating system.
+The acquisition computer filesystem is meant for *temporary* storage of data acquired by the microscopes. Part of the imaging workflow --- after acquisition --- is to manage your data. Initially this means you must move the data somewhere for permanent storage, archiving and backup. To achieve this on our acquisition systems, you mount a network share as a local drive during your session. This allows you to drag and drop your files from the local computer's hard disk drive to the network computer's hard disk drive. The process of adding a network shared drive to a local system is known as "mapping a network drive". The following instructions describe one way to mount network shared drives on microscope acquisition systems. Our acquisition systems use *Windows* as the operating system.
 ### Prerequisites
 To mount a network shared drive, you must have access to a network shared drive (obviously). At King's, institutionally provided data storage is managed through [*King's Computational Research, Engineering and Technology Environment*](https://er.kcl.ac.uk).
 {{< alert icon="play" cardColor=#3b82f6 >}}[Request RDS from e-Research](https://docs.er.kcl.ac.uk/research_data/rds_requesting_access/){{< /alert >}}
 
+### The Procedure
+
 <details>
   <summary>{{< icon "microsoft" >}} Windows</summary>
-
-### The Procedure
 There are several ways to successfully mount a network location as a local drive so that you can copy your data to the network drive and then delete it from the local drive. The following method uses the Windows GUI.
 
 {{< timeline >}}
