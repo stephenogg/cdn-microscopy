@@ -31,7 +31,7 @@ Fluorescence Specifications:
 
 
 <details>
-  <summary>{{< icon "chevron-down" >}} SOP</summary>
+  <summary>{{< icon "chevron-down" >}}Acquisition SOP</summary>
 
 ## SOP
 Wholeslide scanning requires a different mindset than *normal* fluorescence imaging. When imaging at a confocal, the user has complete control over the parameters to acquire an image and can instantly change these, using information in the acquired data to update the acquisitionparameters. Whole slide imaging, in contrast, is completely automated. The goal is to offload the entire decision making process to the system. Users should be able to load the slides, select a file (Zeiss calls this a scan profile) that contains all the instructions to complete a scan, perform a preview scan, and then press the **scan** button. The system will then scan all the slides, freeing the user to perform other tasks.
@@ -153,4 +153,7 @@ placing the red frame covers the label area of the slide.
 {{< /timeline >}}
 
 
+</details>
+<details>
+    <summary><a href="https://stephenogg.github.io/cdn-microscopy/protocols/shading-reference/">Shading Correction SOP</a></summary>
 </details>

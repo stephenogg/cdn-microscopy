@@ -177,11 +177,87 @@ After correcting all your channels you will likely have the following images ope
  1. A shading reference for each channel in your original data.
  1. A corrected image for each channel in your original data.
 
- In my case this results in 7 image tabs open. Of these, the only one that is currently saved to the hard drive is the original data. At this point you can close the shading reference images, they are no longer needed. You can also close the original data as that will not be needed for the next step.
+ In my case this results in 7 image tabs open. Of these, the only one that is currently saved to the hard drive is the original data. At this point you can close the shading reference images, they are no longer needed. You can also close the original data as that will not be needed for the next step. Only the single channel, corrected images are required for the final step.
 {{< /timelineItem >}}
 {{< /timeline >}}
 
 #### Step 3 Fuse the corrected channels to recreate a single multi-channel image.
 
 {{< timeline >}}
+{{< timelineItem icon="1" header=" " subheader="Fuse the first two channels" md="true" badge="Image Fusion" >}}
+You can only select two images as inputs for the add channels method at a time. Consequently, in the example below, to create a 3-channel corrected image, you will run the "Add Channels" method twice. First adding the fist and second corrected image channels to create a 2-channel corrected image. Then in a second round, you will add the third channel corrected image to the 2-channel image you created in the fist step. For 4-channels, it's a 3-step process- Add 1+2, add 3+4, then add the results of steps 1 and 2 to get the final 4-channel image.
+<br>
+<br>
+First Channel Add:
+{{< columns >}}
+ 1. In the Method pane under the processing tab, select "Add Channels".
+ 1. Nothing to select in the "Method Parameters".
+ 1. Select the corrected images corresponding to the first two channels of your original image in the "Image Parameters".
+ 1. Click the "Apply" button to fuse the two channels into a single, 2-channel image.
+{{< column >}}
+{{< figure
+    default=true
+    src="AddChannelsImageParams.PNG"
+>}} 
+{{< endcolumns >}}
+{{< /timelineItem >}}
+{{< timelineItem icon="2" header=" " subheader="Fuse the third channel with the result of step 1" md="true" badge="Image Fusion" >}}
+Second Channel Add:
+{{< columns >}}
+ 1. In the Method pane under the processing tab, "Add Channels" should already be selected from the previous step.
+ 1. Nothing to select in the "Method Parameters".
+ 1. Select the corrected images corresponding to the reult of the last channel addition and the third channel in the "Image Parameters".
+ 1. Click the "Apply" button to fuse the images into a single, 3-channel, corrected image.
+{{< column >}}
+{{< figure
+    default=true
+    src="SecondAddChannelSelectInputDetails.PNG"
+>}} 
+{{< endcolumns >}}
+{{< /timelineItem >}}
+{{< timelineItem icon="3" header=" " subheader="Congratulations! Save your work!" md="true" badge="Final Thoughts" >}}
+Save your final recreated image that should be identical to the original image, sans shading. You can close all the intermediate images without saving - if you need one of the channels or scenes from your original image that has been corrected you can use either the "Create Imge Subset" or the "Create Image Subset and Split" method in the Processing tab to generate the required files.
+{{< columns >}}
+{{< figure
+    default=true
+    src="ListofImages.PNG"
+>}}
+{{< column >}}
+All the images created during this tutorial, from top to bottom in the list:
+<br>
+- Original, uncorrected image.
+<p> <br> </p>
+
+- DAPI shading reference image.
+
+<p> <br> </p>
+
+- FITC shading reference image.
+
+<p> <br> </p>
+
+- Rhodamine shading reference image.
+
+<p> <br> </p>
+
+- DAPI corrected image.
+
+<p> <br> </p>
+
+- FITC corrected image.
+
+<p> <br> </p>
+
+- Rhodamine corrected image.
+
+<p> <br> </p>
+
+- DAPI+FITC fused channel image.
+
+<p> <br> </p>
+
+- final result. A 3-channel corrected image.
+{{< endcolumns >}}
+
+{{< /timelineItem >}}
 {{< /timeline >}}

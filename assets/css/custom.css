@@ -1,0 +1,10 @@
+.footer-menu {
+    display: flex;
+    justify-content: space-between; /* Creates columns */
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1; /* Equal width columns */
+    min-width: 200px; /* Responsive behavior */
+}

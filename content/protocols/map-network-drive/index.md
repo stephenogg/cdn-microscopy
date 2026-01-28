@@ -36,14 +36,15 @@ Select "Map Network Drive" from the contextual menu.
  <ul>
  <li>The drive letter can be anything that is not currently in use.</li>
  <li>In the "Folder" field, enter the path to your RDS share, starting with two backslashes. At acquisition and analysis workstations, be sure to add the "hsrn" between the rds and the er portions of the address, this ensures your data travels across the <u>h</u>igh <u>s</u>peed <u>r</u>esearch <u>n</u>etwork. Leave out the "hsrn" from the string when using another computer in your lab.</li> 
-<li>Make sure the "Connect using different credentials" tickbox <i>is</i> ticked and the "Reconnect at sign-in <em>is</em> <em><strong>NOT</strong></em> ticked.</li>
-<li>In this context, "different credentials" means different to the ones used to login to the local acquisition computer.
-</li>
+
 <li>e.g.
     <ul>
     <li><i>\\rds.hsrn.er.kcl.ac.uk\prj\dn_cdn_microscopy</i> Would be my path from an acquisition system.</li>
     <li><i>\\rds.er.kcl.ac.uk\prj\dn_cdn_microscopy</i> would be my path from any other non-acquisition system.</li>
     </ul>
+</li>
+<li>Make sure the "Connect using different credentials" tickbox <i>is</i> ticked and the "Reconnect at sign-in <em>is</em> <em><strong>NOT</strong></em> ticked.</li>
+<li>In this context, "different credentials" means different to the ones used to login to the local acquisition computer.
 </li>
 <li>Clicking "Finish" will cause a pop-up window to appear where you can add your credentials.</li>
 </ul>
