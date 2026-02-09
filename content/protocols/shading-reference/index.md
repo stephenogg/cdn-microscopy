@@ -139,7 +139,7 @@ Once the shading references are created and the shading reference from tile imag
 {{< columns >}}
  1. Select Shading Correction as the method in the Processing tab Methods pane.
  1. Select the original image as the input image in the Input pane.
- 1. Select the DAPI channel's shading referrence image as the Shading Reference image in the Input Pane.
+ 1. Select the DAPI channel's (or whatever your first channel is) shading reference image as the Shading Reference image in the Input Pane.
 {{< column >}}
 {{< figure
     default=true
@@ -153,19 +153,18 @@ In the Parameters Panes, set the choices as follows:
  - Select "Camera Shading" in the dropdown menu for "Shading Mode".
  - Leave the "Automatic" tickbox unselected. If you select it, ZEN will create the shading references as part of the correction and it will get them wrong. Your corrected image will look worse than your original image.
  - Select the "Adjust per Channel" tickbox. This will allow you to select different fates for each channel.
-    - Select "Process Channel" for the DAPI Channel, select "Skip Channel" for the other two channels.
+    - Select "Process Channel" for the DAPI Channel (or whatever your first channel is), select "Skip Channel" for the other channels.
  - Leave the "Display Mode" and "offset" as the defaults - Multiplicative and 0, respectively.
-
 {{< column >}}
 {{< figure
     default=true
     src="CorrDAPIParams.PNG"
 >}}
 {{< endcolumns >}}
-Pressing "Apply" will now apply these settings and use the shading reference for the DAPI channel to correct the DAPI channel of the original image. A new image will be created with one DAPI channel and the image is corrected. Inspect this image to make sure the visible tiling lines have been removed.
+Pressing "Apply" will now apply these settings and use the shading reference for the DAPI (first) channel to correct the DAPI (first) channel of the original image. A new image will be created with one channel and the image is corrected. Inspect this image to make sure the visible tiling lines have been removed.
 {{< /timelineItem >}}
 {{< timelineItem icon="4" header=" " subheader="Repeat" md="true" badge="Shading Correction" >}}
-Repeat this process for as many channels as you have. In this case, I had to repeat this twice - once for the FITC channel and once for the Rhodamine channel. Before pressing the apply button, change the shading refernce in the input section to the shading reference that matches the channel you are processing and change the channel you are processing in the Adjust per channel dropdown menu of the parameters pane. see the image below for an example of how I changed the settings to process the FITC channel.
+Repeat this process for as many channels as you have. In this case, I had to repeat this twice - for the FITC & Rhodamine channels. Before pressing the apply button, change the shading refernce in the input section to the shading reference that matches the channel you are processing and change the channel you are processing in the Adjust per channel dropdown menu of the parameters pane. see the image below for an example of how I changed the settings to process the FITC channel.
 {{< figure
     default=true
     src="ShadingCorrFITCProcess.PNG"
@@ -173,7 +172,7 @@ Repeat this process for as many channels as you have. In this case, I had to rep
 {{< /timelineItem >}}
 {{< timelineItem icon="5" header=" " subheader="Correction Finished" md="true" badge="Shading Correction" >}}
 After correcting all your channels you will likely have the following images open:
- 1. The original image that you want to be corrected
+ 1. The original image that you wanted to  correct.
  1. A shading reference for each channel in your original data.
  1. A corrected image for each channel in your original data.
 
@@ -185,7 +184,7 @@ After correcting all your channels you will likely have the following images ope
 
 {{< timeline >}}
 {{< timelineItem icon="1" header=" " subheader="Fuse the first two channels" md="true" badge="Image Fusion" >}}
-You can only select two images as inputs for the add channels method at a time. Consequently, in the example below, to create a 3-channel corrected image, you will run the "Add Channels" method twice. First adding the fist and second corrected image channels to create a 2-channel corrected image. Then in a second round, you will add the third channel corrected image to the 2-channel image you created in the fist step. For 4-channels, it's a 3-step process- Add 1+2, add 3+4, then add the results of steps 1 and 2 to get the final 4-channel image.
+You can only select two images as inputs for the "Add Channels" method. Consequently, in the example below, to create a 3-channel corrected image, I had to run the "Add Channels" method twice. First adding the fist and second corrected image channels to create a 2-channel corrected image. Then in a second round, adding the third channel corrected image to the 2-channel image you created in the fist step. For 4-channels, it's a 3-step process- Add 1+2, add 3+4, then add the results of steps 1 and 2 to get the final 4-channel image, etc.
 <br>
 <br>
 First Channel Add:
@@ -216,7 +215,7 @@ Second Channel Add:
 {{< endcolumns >}}
 {{< /timelineItem >}}
 {{< timelineItem icon="3" header=" " subheader="Congratulations! Save your work!" md="true" badge="Final Thoughts" >}}
-Save your final recreated image that should be identical to the original image, sans shading. You can close all the intermediate images without saving - if you need one of the channels or scenes from your original image that has been corrected you can use either the "Create Imge Subset" or the "Create Image Subset and Split" method in the Processing tab to generate the required files.
+Save your final recreated image that should be identical to the original image, sans shading. You can close all the intermediate images without saving - if you need one of the channels or scenes from your original image that has been corrected you can use either the "Create Image Subset" or the "Create Image Subset and Split" method in the Processing tab to generate the required image data in separate files.
 {{< columns >}}
 {{< figure
     default=true
@@ -261,3 +260,22 @@ All the images created during this tutorial, from top to bottom in the list:
 
 {{< /timelineItem >}}
 {{< /timeline >}}
+{{< badge >}}
+Finished Product!
+{{< /badge >}}
+
+{{< columns >}}
+{{< figure
+    default=true
+    src="B4.PNG"
+    title="Original Image Data"
+    caption=""
+>}}
+{{< column >}}
+{{< figure
+    default=true
+    src="After.PNG"
+    title="Corrected Image Data"
+    caption=""
+>}}
+{{< endcolumns>}}
