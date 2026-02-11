@@ -23,9 +23,18 @@ The UltraMicroscope Blaze is a light sheet microscope designed for subcellular 3
     caption="How to clean the cuvette between imaging media"
 >}}
 {{< endcolumns >}}
+{{< columns >}}
 {{< figure
     src="DippingCapChange.PNG"
     href="038_009_DippingCapChange_LH.pdf"
     nozoom="true"
     caption="How to change the dipping caps between imaging media"
 >}}
+{{< column >}}
+{{< figure
+    src="ConnectingImSpectr.png"
+    href="048_012_IntegratedWorkflow_LH.pdf"
+    nozoom="true"
+    caption="How to change the dipping caps between imaging media"
+>}}
+{{< endcolumns >}}

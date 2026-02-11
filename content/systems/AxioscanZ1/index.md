@@ -34,7 +34,7 @@ Fluorescence Specifications:
   <summary>{{< icon "chevron-down" >}}Acquisition SOP</summary>
 
 ## SOP
-Wholeslide scanning requires a different mindset than *normal* fluorescence imaging. When imaging at a confocal, the user has complete control over the parameters to acquire an image and can instantly change these, using information in the acquired data to update the acquisitionparameters. Whole slide imaging, in contrast, is completely automated. The goal is to offload the entire decision making process to the system. Users should be able to load the slides, select a file (Zeiss calls this a scan profile) that contains all the instructions to complete a scan, perform a preview scan, and then press the **scan** button. The system will then scan all the slides, freeing the user to perform other tasks.
+Wholeslide scanning requires a different mindset than *normal* fluorescence imaging. When imaging at a confocal, the user has complete control over the parameters to acquire an image and can instantly change these, using information in the acquired data to update the acquisition parameters. Whole slide imaging, in contrast, is completely automated. The goal is to offload the entire decision making process to the system. Users should be able to load the slides, select a file (Zeiss calls this a scan profile) that contains all the instructions to complete a scan, perform a preview scan, and then press the **scan** button. The system will then scan all the slides, freeing the user to perform other tasks.
 {{< columns >}}
 To accomplish this, the system needs to know basic things about the imaging, like:
 1. What type of contrast method you wish to use
@@ -66,10 +66,14 @@ In the Zeiss Zen slide scanning software, a file called the "scan profile" conta
 
 {{< timelineItem icon="1" header=" " subheader="Turn on the system" badge="start here" >}}
 <ul>
-    <li>Turn on the Scanner. Wait until you think the scanner is initialised.</li>
+    <li><a href="IMG_4739.JPG">Turn on the Scanner.</a> Wait until you think the scanner is initialised.</li>
+    <ul>
+        <li><a href="IMG_4739.JPG">There are two separate buttons to turn on the scanner.</a> One on the front and one near the power cable on the left.</li>
+        <li><a href="image1.png">The top left corner of the scanner will light up blue during initialisation and then turn green when it's ready.</a></li>
+    </ul>
     <li>Turn on the Computer. Wait until the Windows desktop appears.</li>
-    <li>Start the software. Wait until the splashscreen appears.</li>
-    <li>Click on the "ZEN Slidescan" button. Wait until the system initialises in the software.</li>
+    <li><a href="SplashChoice.png">Start the software. Wait until the splashscreen appears.</a></li>
+    <li><a href="SplashChoice.png">Click on the "ZEN Slidescan" button.</a> Wait until the system initialises in the software.</li>
 </ul>
 {{< /timelineItem >}}
 
@@ -117,16 +121,16 @@ Creating a scan profile is by far the most challengin part of the slide scanning
 
 ## Detailed Instructions
 {{< timeline >}}
-{{< timelineItem icon="1" header="Naming The Scan Profile" badge="Step 1" >}}
+{{< timelineItem icon="1" subheader="Naming The Scan Profile" badge="Step 1" >}}
 
 {{< /timelineItem >}}
-{{< timelineItem icon="2" header="Creating a label image" badge="Step 2" >}}
+{{< timelineItem icon="2" subheader="Creating a label image" badge="Step 2" >}}
 
 {{< /timelineItem >}}
 
 
 
-{{< timelineItem icon="3" md="true" header="Defining the preview image parameters" badge="Step 3" >}}
+{{< timelineItem icon="3" md="true" subheader="Defining the preview image parameters" badge="Step 3" >}}
 > [!TIP] Information
 > For best results the red frame should cover the complete slide and some air
 around the edges. This will improve identification of areas to be used for automatic shading correction for brightfield imaging. To limit the range for the tissue detection use the red
@@ -141,13 +145,13 @@ placing the red frame covers the label area of the slide.
     width=400
     >}}
 {{< /timelineItem >}}
-{{< timelineItem icon="4" header="Tissue identification" badge="Step 4" >}}
+{{< timelineItem icon="4" subheader="Tissue identification" badge="Step 4" >}}
 
 {{< /timelineItem >}}
-{{< timelineItem icon="5" header="Creating a focus map" badge="Step 5" >}}
+{{< timelineItem icon="5" subheader="Creating a focus map" badge="Step 5" >}}
 
 {{< /timelineItem >}}
-{{< timelineItem icon="6" header="Defining the scan parameters" badge="Step 6" >}}
+{{< timelineItem icon="6" subheader="Defining the scan parameters" badge="Step 6" >}}
 
 {{< /timelineItem >}}
 {{< /timeline >}}
