@@ -79,12 +79,13 @@ In the Zeiss Zen slide scanning software, a file called the "scan profile" conta
 
 {{< timelineItem icon="2" subheader="Insert your slides" >}}
 <ul>
-    <li>Place your slides into the slide carrier. Slide label must be near the silver clamp.</li>
+    <li><a href="loadSlides.png">Place your slides into the slide carrier. Slide label must be near the silver clamp.</a></li>
+    <li><a href="loadingAid.png">You may need to use the slide loading aid if you have many slides.</a></li>
     <li>Press the open/close button on the scanner. Wait until the door opens.</li>
-    <li>Pull open one of the trays. It doesn't matter which one.</li>
+    <li><a href="loadSlides.jpg">Pull open one of the trays. It doesn't matter which one.</a></li>
     <li>Place the slide carrier(s) on the tray(s), coverslip up, labels closest to you. Close the tray(s).</li>
     <li>Press the open/close button to close the door. Wait until the system auto discovers the slide carrier(s) location(s).</li>
-    <li>You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</li>  
+    <li><a href="cartoon.jpg">You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</a></li>  
 </ul>
 {{< /timelineItem >}}
 {{< timelineItem icon="3" subheader="Create a Scan Preview" >}}
@@ -111,9 +112,10 @@ In the Zeiss Zen slide scanning software, a file called the "scan profile" conta
   <summary>{{< icon "chevron-down" >}} Creating a scan profile</summary>
 
 ## Creating a Scan Profile
-Creating a scan profile is by far the most challengin part of the slide scanning workflow. There is a "Wizard" that can help you go throught the steps to create a scan profile. Briefly, the steps consist of:
-1. Naming the scan profile.
-1. Creating a "label" image.
+Creating a scan profile is by far the most challengin part of the slide scanning workflow. In ZEN 3.1, there are two "Wizards" that can help you through the initial steps of creating a scan profile. Briefly, the steps consist of:
+1. Creating a scan profile and saving it with the first wizard.
+    - This includes giving the scan profile a name, and telling ZEN some basic information about the type of scan profile you would like to create.
+1. Adapting this initial scan profile so that it is specific to your sample type with the second wizard.
 1. Defining the preview image parameters.
 1. Using the preview image to identify tissue sections on the slide.
 1. Creating a focus map.
