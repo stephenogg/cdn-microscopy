@@ -47,7 +47,7 @@ Orange text indicates closest pixel size to Nyquist, but not quite diffraction l
 
 |           Pixel Sizes           | Lens 1X/0.1 | Lens 4X/0.35 | Lens 12X/0.53 |
 |:-------------------------------:|:-----------:|:------------:|:-------------:|
-| Resolution (@550nm) micrometers |      *3.35* |       *0.96* |        *0.63* |
+| Resolution (@550nm) &mu;m |      *3.35* |       *0.96* |        *0.63* |
 |            Zoom 0.6X            |        9.85 |         2.71 |           0.9 |
 |            Zoom 1.0X            |        5.91 |         1.62 |          0.54 |
 |            Zoom 1.66X           |        3.55 |         0.98 |<font color="red">0.32</font> |

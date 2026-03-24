@@ -116,6 +116,11 @@
   pageRef = "systems/AxioscanZ1"
 
 [[main]]
+  parent = "Systems"
+  name = "Discovery Stereomicroscope"
+  pageRef = "systems/Discovery"
+
+[[main]]
   name = "Protocols"
   pageRef = "protocols"
 
