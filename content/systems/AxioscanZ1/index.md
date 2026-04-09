@@ -72,7 +72,7 @@ In the Zeiss Zen slide scanning software, a file called the "scan profile" conta
         <li><a href="image1.png">The top left corner of the scanner will light up blue during initialisation and then turn green when it's ready.</a></li>
     </ul>
     <li>Turn on the Computer. Wait until the Windows desktop appears.</li>
-    <li><a href="SplashChoice.png">Start the software. Wait until the splashscreen appears.</a></li>
+    <li><a href="zenIcon.png">Start the software. Wait until the splashscreen appears.</a></li>
     <li><a href="SplashChoice.png">Click on the "ZEN Slidescan" button.</a> Wait until the system initialises in the software.</li>
 </ul>
 {{< /timelineItem >}}
@@ -83,9 +83,9 @@ In the Zeiss Zen slide scanning software, a file called the "scan profile" conta
     <li><a href="loadingAid.png">You may need to use the slide loading aid if you have many slides.</a></li>
     <li>Press the open/close button on the scanner. Wait until the door opens.</li>
     <li><a href="loadSlides.jpg">Pull open one of the trays. It doesn't matter which one.</a></li>
-    <li>Place the slide carrier(s) on the tray(s), coverslip up, labels closest to you. Close the tray(s).</li>
+    <li><a href="loadSlides.jpg">Place the slide carrier(s) on the tray(s), coverslip up, labels closest to you.</a> Close the tray(s).</li>
     <li>Press the open/close button to close the door. Wait until the system auto discovers the slide carrier(s) location(s).</li>
-    <li><a href="cartoon.jpg">You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</a></li>  
+    <li><a href="initialLoad.png">You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</a></li>  
 </ul>
 {{< /timelineItem >}}
 {{< timelineItem icon="3" subheader="Create a Scan Preview" >}}
