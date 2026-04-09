@@ -81,6 +81,7 @@
   name = "Rates"
   pageRef = "about/rates"
 
+
 [[main]]
   name = "Systems"
   pageRef = "systems"
@@ -121,6 +122,11 @@
   pageRef = "systems/Discovery"
 
 [[main]]
+  parent = "Systems"
+  name = "Non-Centre Systems"
+  pageRef = "systems/non-centre-systems"
+
+[[main]]
   name = "Protocols"
   pageRef = "protocols"
 
@@ -147,6 +153,11 @@
 parent = "Training"
   name = "Getting Started"
   pageRef = "training/getting-started"
+
+[[main]]
+parent = "Training"
+  name = "Tutorials"
+  pageRef = "training/tutorials"
 
 [[subnavigation]]
   name = "Get Started"

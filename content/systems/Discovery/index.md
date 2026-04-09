@@ -32,7 +32,7 @@ If you're using transmitted light, set the [illumination sliders](sliders.png) a
 
 {{< /timelineItem >}}
 {{< timelineItem icon="2" header=" " subheader="Turn On System" badge="Step 2" md="true" >}}
-1. [Turn on the Microscope](microscopeControl.png). Button next to the &#x23FC; symbol on the microscope control panel.
+1. [Turn on the Microscope](microscopeControl.png). Press the button next to the &#x23FC; symbol on the microscope control panel.
 1. [Turn on the Computer](computer.png). Computer sits on the shelf, next to the Excite EXFO-120 fluorescence light source.
 1. Turn on the light source required for your imaging modality.
 	- [Transmitted light source](transmittedLight.png). White light LED on the table behind the microscope. Also set the brightness of the light source. 
@@ -44,9 +44,9 @@ If you're using transmitted light, set the [illumination sliders](sliders.png) a
 
 {{< timelineItem icon="3" header=" " subheader="Place your Sample and configure the system" badge="Initial Image" md="true" >}}
 1. Put your sample under the microscope lens.
-1. Adjust the lighting appropriately.
+1. Adjust the lighting intensity and directionality appropriately.
 1. [Set the light path to send the light to your eyes](lightpathEyes.png).
-1. Set the zoom to the lowest magnification (7.5X)
+1. Set the zoom to the lowest magnification (7.5X), using the zoom wheel on the microscope control panel.
 1. [Focus](focusWheel.png)
 1. Adjust zoom and focus to create the image you require.
 {{< /timelineItem>}}
@@ -89,9 +89,39 @@ Because this version of windows is no longer supported by microsoft, this comput
 
 ## Advanced Acquisition
 ### Multi-Dimensional Acquisition
-Micro-Manager enables the ability to capture multiple images from different dimensions ([wavelength, time, z, xy](screenshots/multiDdimensions.png)) and treat them as a single image or image series. Our stereomicroscope can only take advantage of [two of these extra dimensions](screenshots/multiDtimeChannel.png). You can either activate multiple channel acquisition or timelapse acquisition in the Multi-Dimensional Acquisition window that opens by pressing the ["MultiD Acq. button"](screenshots/MultiDbutton.png) in the MM main windown.
+Micro-Manager enables the ability to capture multiple images from different dimensions ([wavelength, time, z, xy](screenshots/multiDdimensions.png)) and treat them as a single image or image series. Our stereomicroscope can only take advantage of [two of these extra dimensions](screenshots/multiDtimeChannel.png). You can either activate multiple channel acquisition or timelapse acquisition in the Multi-Dimensional Acquisition window that opens when you press the ["MultiD Acq. button"](screenshots/MultiDbutton.png) in the MM main window.
 
 ### Fluorescence imaging
-Our Discovery V.20 has a pentafluor fluorescence filter turret that places filter cubes into the light path for both eyes, allowing stereo fluorescence viewing. We have filter cubes for [green](https://www.micro-shop.zeiss.com/en/uk/fluorescenceAssistant/filtersets/000000-1031-346) and [red](https://www.micro-shop.zeiss.com/en/uk/fluorescenceAssistant/filtersets/488043-9100-400) dyes.
+Our Discovery V.20 has a pentafluor fluorescence filter turret that places filter cubes into the light path for both eyes, allowing stereo fluorescence viewing. We have filter cubes for [green](https://www.micro-shop.zeiss.com/en/uk/fluorescenceAssistant/filtersets/000000-1031-346) in [position 2](GFPFilter.png) and [red](https://www.micro-shop.zeiss.com/en/uk/fluorescenceAssistant/filtersets/488043-9100-400) in [position 3](Cy3Filter.png). Use the knurled wheel to change the filter from one posiition to another. Match the number on the front to the numbered label on the front of the filter wheel.
+{{< figure
+	src="Cy3FilterControls.png"
+	href=
+	nozoom=true
+	caption="Use the knurled dial at the red arrow to set the filter to the correct position."
+>}}
 
-1. 
+---
+
+{{< gallery >}}
+  {{< figure src="gallery/closed.jpg" caption="Closed" figureClass="grid-w33" >}}
+  {{< figure src="gallery/open.jpg" caption="Open" figureClass="grid-w33" >}}
+  {{< figure src="gallery/IR.jpg" caption="Open with IR filter" figureClass="grid-w33" >}}
+{{< /gallery >}}
+
+Because changing channels is a manual process, MM can run a script that prompts you to change filter during an acquisition.
+1. Open the scripts panel. Select [*Tools->Script Panel...*](screenshots/scriptPanelMenu.png) in the main MM window.
+1. Run the "ManualAcq2.bsh" script by pressing the Run button in the top of the [script panel](screenshots/scriptPanel.png) or by double clicking the text “ManualAcq2.bsh” in the left-hand pane. NB - Nothing happens yet!
+1. Before acquiring multiple channels, manually set the reflector turret to each of the channels you wish to collect in turn, activate the fluorescence excitation and determine the optimal exposure time for each channel. 
+1. Press the ["MultiD Acq. button"](screenshots/MultiDbutton.png) in the MM main window to bring up the Multi-Dimensional Acquisition Window.
+1. Select the channels tickbox to enable multichannel imaging.
+1. Select the channels you require in the "Use?" column. [This](screenshots/multiD.png) example shows all possible channels (BF, GFP, Cy3) selected.
+1. Enter the exposure times for each channel in the exposure column. You should have already determined these earlier in step 3.
+1. Press the "Acquire!" button.
+1. The script will prompt you to manually set the microscope's settings for the [first](screenshots/BF.png) channel with a popup message.
+1. Set the filter turret to position 1 (i.e. no filter for BF), deactivate the fluorescence excitation and activate either the reflected or translitted light source depending on your imaging modality.
+1. Pressing "OK" on the popup message will acquire the image for the BF channel and prompt you to change the settings to the [second](screenshots/GFP.png) channel by displaying a 2nd popup message.
+1. Manually move the GFP filter into position (position 2), turn off the reflected/transmitted light and ativate the fluorescence excitation.
+1. Again, pressing "OK" on this second prompt will acquire a 2nd image, adding it to the [multi-dimensional image viewer](https://micro-manager.org/Micro-Manager_User's_Guide#:~:text=10%20z%2Dsteps-,Multi%2DDimensional%20Image%20Viewer,-The%20Multi%2DDimensional) in MM, and prompt you to change to the [third](screenshots/Cy3.png) channel's settings.
+1. Change the filter turret to position 3 (Cy3) - the light source should already be only fluorescence excitation.
+1. Click "OK" one last time. Now you have all three images in separate channels in the image viewer.
+1. Save your data. Micro-Manager can save files in two formats, “separate image files” or an “Image file stack”. See [here](https://micro-manager.org/Micro-Manager_User's_Guide#:~:text=your%20observations/annotations.-,Files%20on%20Disk,-Micro%2DManager%20can) for more information.
