@@ -19,10 +19,12 @@ Designed for imaging fixed samples in fluorescence mode, this LSM800 is equipped
 - Detectors: 2X GAsP, 1X Airyscan
 - Typical Fluorophores: DAPI, Alexa488, EGFP, Rhodamine, mCherry, Alexa546, Alexa568, Alexa647, Cy5
 - LSM800 scanner with two variable spectral dichroic mirrors to direct distinct wavelength the emission fluorescence into three separate
-{{< column >}}{{< figure src=LSM800.png
+{{< column >}}
+{{< figure
+	src=system.jpg
 	default=true >}}
 {{< endcolumns >}}
-{{< figure src=LSM800LightPath.png 
+{{< figure src="/cdn-microscopy/systems/lsm800-fish/LSM800LightPath.png"
 	default=true
 	caption="LSM 800 Light path"
 	class="center" >}}
@@ -43,7 +45,7 @@ Detector 2 filters:
 {{< endcolumns >}}
 
 
-{{< figure src=VSDAnimation.gif
+{{< figure src="/cdn-microscopy/systems/lsm800-fish/VSDAnimation.gif"
 	default=true
 	caption=""
 	class="center" >}}

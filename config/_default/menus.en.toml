@@ -90,41 +90,49 @@
   parent = "Systems"
   name = "LSM800 Fish"
   pageRef = "systems/LSM800-FISH"
+  weight = 10
 
 [[main]]
   parent = "Systems"
   name = "LSM800 Histology"
   pageRef = "systems/LSM800-HISTOLOGY"
+  weight = 20
 
 [[main]]
   parent = "Systems"
   name = "LSM880 Upright"
   pageRef = "systems/LSM880-Upright"
+  weight = 30
 
 [[main]]
   parent = "Systems"
   name = "LSM880 Invert"
   pageRef = "systems/LSM880-Inverted"
+  weight = 40
 
 [[main]]
   parent = "Systems"
   name = "Ultramicroscope"
   pageRef = "systems/ultramicroscope-blaze"
+  weight = 50
   
 [[main]]
   parent = "Systems"
   name = "AxioScan.Z1"
   pageRef = "systems/AxioscanZ1"
+  weight = 5
 
 [[main]]
   parent = "Systems"
   name = "Discovery Stereomicroscope"
   pageRef = "systems/Discovery"
+  weight = 7
 
 [[main]]
   parent = "Systems"
   name = "Non-Centre Systems"
   pageRef = "systems/non-centre-systems"
+  weight = 60
 
 [[main]]
   name = "Protocols"

@@ -7,7 +7,13 @@ showHero = true
 heroStyle = 'background'
 +++
 ## Overview
-The [Discovery.V20 Stereomicroscope](https://www.zeiss.com/microscopy/en/products/light-microscopes/stereo-and-zoom-microscopes/stereo-discovery-v20.html) offers both transmitted and reflected brightfield microscopy as well as the ability to view green and red fluorophores of meso and macro sized samples. With our 1X lens, the system is capable of magnifications from 7.5X to 150X. Image acquisition is enabled through [micro-manager](https://micro-manager.org/) and a Zeiss [MRm camera](AxioCam-MRm3.pdf). Our transmitted light module contains continuously variable mirror adjustment mechanism with multiple degrees of freedom allowing you to adjust the illumination beams’ angle of incidence. In this way, you can establish the illumination needed to contrast different types of specimens. With Meso/Macro microscopy, the lighting and modality of imaging is an important component of the imaging workflow. 
+The [Discovery.V20 Stereomicroscope](https://www.zeiss.com/microscopy/en/products/light-microscopes/stereo-and-zoom-microscopes/stereo-discovery-v20.html) offers both transmitted and reflected brightfield microscopy as well as the ability to view green and red fluorophores of meso and macro sized samples. With our 1X lens, the system is capable of magnifications from 7.5X to 150X. Image acquisition is enabled through [micro-manager](https://micro-manager.org/) and a Zeiss [MRm camera](AxioCam-MRm3.pdf). Our transmitted light module contains continuously variable mirror adjustment mechanism with multiple degrees of freedom allowing you to adjust the illumination beams’ angle of incidence. In this way, you can establish the illumination needed to contrast different types of specimens. With Meso/Macro microscopy, the lighting and modality of imaging is an important component of the imaging workflow.
+
+{{< figure
+	src="system.jpg"
+	nozoom=true
+	caption="System Overview"
+>}}
 
 ## Imaging
 
@@ -21,7 +27,7 @@ The [Discovery.V20 Stereomicroscope](https://www.zeiss.com/microscopy/en/product
 	- Brightfield / Darkfield / Oblique Illumination
 	- Fluorescence
 {{< column >}}
-If you're using transmitted light, set the [illumination sliders](sliders.png) according to the guide below. 
+If you're using transmitted light, set the [illumination sliders](sliders.png) according to the guide below. Click the image to see more information.
 {{< figure
 	src="transmittedLightSettings.png"
 	href="SteREO Discovery Stereomicroscope - Operating Manual.pdf"
