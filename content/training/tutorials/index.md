@@ -6,7 +6,7 @@ layout = 'simple'
 showHero = false
 +++
 
+Below you will find several videos demonstrating a workflow using [QuPath](https://qupath.github.io/), an open source whole slide image analysis program. [Maros van den Bergh](https://www.linkedin.com/in/maros-van-den-bergh-9214ba143/) is credited with designing and cerating these videos. 
 
-
-{{< youtubeLite id="wqqUbFMWnfQ" label="Setting Up QuPath" >}}
+{{< youtubeLite id="wqqUbFMWnfQ" label="Setting Up QuPath" title="Setting Up QuPath" >}}
 
