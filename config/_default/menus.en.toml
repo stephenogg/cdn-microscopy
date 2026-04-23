@@ -151,7 +151,12 @@
 [[main]]
   parent = "Protocols"
   name = "Shading Reference"
-  pageRef = "protocols/shading-reference" 
+  pageRef = "protocols/shading-reference"
+
+[[main]]
+  parent = "Protocols"
+  name = "QuPath Video Tutorials"
+  pageRef = "training/tutorials" 
 
 [[main]]
   name = "Training"
