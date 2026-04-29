@@ -7,7 +7,7 @@ showHero = false
 +++
 
 
-Although I don't manage/maintain the following microscopes, and they are not bookable through the PPMS booking system, I can help you gain access to the following systems. [Email](mailto:stephen.ogg@kcl.ac.uk) me with requests for access:
+Although the centre doesn't manage/maintain the following microscopes, and they are not bookable through the PPMS booking system, I can help you gain access to the following systems. [Email](mailto:stephen.ogg@kcl.ac.uk) me with requests for access:
 
 
 |                                               Name                                              |  Mfr  | Location |           Type          | Type     | Use Case                  |
