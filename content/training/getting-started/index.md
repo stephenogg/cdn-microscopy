@@ -5,7 +5,7 @@ layout = "simple"
 
 ## Overview
 Getting started imaging with our resources requires:
-- **An account in Stratocore PPMS** --- for booking and billing.
+- **[An account in Stratocore PPMS](RequestingANewInternalUserAccountInStratocore.pdf)** --- for booking and billing.
 - **Training** --- so that you don't damage the equipment or yourself.
 - **Physical Access** --- so that you can get into the rooms where the microscopes live.
 - **A strategy to manage your image data** --- to keep our acquisition computers from filling up with data and as a means for you to have access to your data.
@@ -13,7 +13,9 @@ Getting started imaging with our resources requires:
 ## PPMS
 Stratocore [PPMS](https://stratocore.com/), our booking and billing system, is a cloud-based management software designed for scientific core facilities and research labs, providing a centralized platform for equipment booking, training, maintenance, billing, and project tracking. The system supports various functions, from managing access to advanced resources to simplifying financial operations and ensuring compliance for researchers and facility staff.
 To use *many* of the shared resource facilities at KCL, you will need an account in the system.
-To access the King's instance of PPMS, please visit this URL: [https://ppms.eu/kcl](https://ppms.eu/kcl). This is the landing page for all the facilities that use PPMS at KCL. Click on the link to the CDN facility to reach our facility and login with your k-number, or request an account in the system.
+To access the King's instance of PPMS, please visit this URL: [https://ppms.eu/kcl](https://ppms.eu/kcl). This is the landing page for all the facilities that use PPMS at KCL. Click on the link to the CDN facility to reach our facility and login with your k-number. If you don't have an account, follow [these](RequestingANewInternalUserAccountInStratocore.pdf) directions to obtain one.
+- [Quickstart video for PPMS](StratocoreUserVideo.ppsx)  (This link downloads a powerpoint viedo describing the basics of PPMS)
+
 ### PPMS Booking Policies
 - You may book 1 week in advance
 - Booking will open at 11:00 on Thursday for the following Monday to Sunday period.
