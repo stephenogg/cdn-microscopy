@@ -43,7 +43,7 @@ Select "Map Network Drive" from the contextual menu.
     <li><i>\\rds.er.kcl.ac.uk\prj\dn_cdn_microscopy</i> would be my path from any other non-acquisition system.</li>
     </ul>
 </li>
-<li>Make sure the "Connect using different credentials" tickbox <i>is</i> ticked and the "Reconnect at sign-in" <em>is</em> <em><strong>NOT</strong></em> ticked.</li>
+<li>Make sure the "Connect using different credentials" tickbox <i>is</i> ticked and the "Reconnect at sign-in <em>is</em> <em><strong>NOT</strong></em> ticked.</li>
 <li>In this context, "different credentials" means different to the ones used to login to the local acquisition computer.
 </li>
 <li>Clicking "Finish" will cause a pop-up window to appear where you can add your credentials.</li>

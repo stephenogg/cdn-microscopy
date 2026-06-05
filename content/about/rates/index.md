@@ -7,11 +7,11 @@ showHero = false
 +++
 
 ### Rates (£/hr)
-These rates were last updated 1 March 2025. New rates will come into effect 1 March 2026.
+These rates were last updated 1 March 2025. New rates will come into effect soon.
 
-|        Rate          | LSM 800 Confocal | LSM 880 Confocal | AxioScan.Z1 | LightSheet.Z1 |
+|        Rate          | LSM 800 Confocal | LSM 880 Confocal | AxioScan.Z1 | LightSheet    |
 |---------------------:|:----------------:|:----------------:|:-----------:|:-------------:|
-|     **UKRI TRAC**    |            25.20 |            27.30 |       15.80 |         42.00 |
+|     **UKRI**         |            25.20 |            27.30 |       15.80 |         42.00 |
 |      **Charity**     |            12.30 |            12.60 |        7.40 |         20.10 |
 |  **Horizon 2020 EC** |            25.20 |            27.30 |       15.80 |         42.00 |
 | **Horizon Europe EC**|            25.20 |            27.30 |       15.80 |         42.00 |
