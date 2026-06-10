@@ -113,26 +113,33 @@ In the Zeiss Zen slide scanning software, a file called the "scan profile" conta
 
 ## Creating a Scan Profile
 Creating a scan profile is by far the most challenging part of the slide scanning workflow. In ZEN 3.1, there are "Wizards" that can help you through the initial steps of creating a scan profile. One wizard assumes you don't have a scanprofile and would like to create one from scratch. The other wizard allows you to adapt a prexisting scan profile for a new sample or new set of scan parameters. To start from scratch, click on the "Smart Profile Selection..." towards the top left of the UI, underneath the default scan profile pop-up list.
-
+{{< columns >}}
 {{< figure
     src="SmartProfile.png"
     nozoom=true
     caption="Smart Profile Wizard"
 >}}
-
-{{< columns >}}
+{{< column >}}
 {{< figure
     src="step1.png"
     nozoom=true
     caption="Choose a Contrast Method"
 >}}
-{{< column >}}
+{{< endcolumns >}}
+{{< columns >}}
 {{< figure
     src="step2.png"
     nozoom=true
     caption="Choose a Sample Configuration"
 >}}
+{{< column >}}
+{{< figure
+    src="step3.png"
+    nozoom=true
+    caption="Choose a Staining Intensity"
+>}}
 {{< endcolumns >}}
+
 1. The Wizard will open and guide you trhough a series of questions to create an initial base scan profile that will then need to be tailored to your samples. 
 
 1. Adapting this initial scan profile so that it is specific to your sample type with the second wizard.
