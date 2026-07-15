@@ -88,6 +88,12 @@
 
 [[main]]
   parent = "Systems"
+  name = "Abberior Mirava STED"
+  pageRef = "systems/STED"
+  weight = 5
+
+[[main]]
+  parent = "Systems"
   name = "LSM800 Fish"
   pageRef = "systems/LSM800-FISH"
   weight = 10

@@ -82,6 +82,12 @@ If everything is entered correctly and the moon is in the right phase, then your
   <summary>{{< icon "apple" >}} MacOS</summary>
   
 #### Step By Step
+
+None of the connection steps below will be successful if you are using 
+your own computer and are on the King's wireless network. If you repeatedly 
+fail to connect, please see this [e-research documentation](https://docs.er.kcl.ac.uk/CREATE/tools/openvpn/) 
+explaining how to install an OpenVPN client for MacOS. 
+
 {{< columns >}}
 1. With the finder active, click on ⌘+K to bring up the "Connect to Server" dialogue box.
 1. Enter the path to your RDS share in the "Server Address:" field, starting with "smb://"
@@ -93,12 +99,13 @@ None of our acquisition computers runs MacOS, so you will always connect to your
     
 1. Click "Connect" to initialise the connection, which initiates the authentication process.
 1. When the authentication window appears, enter your credentials in the following format:
-    - Username: DOMAIN\username --- i.e. KCLAD/k###########
+    - Username: DOMAIN\username --- i.e. KCLAD\k###########
     - Password: Your password for that account.
 1. The RDS share should appear as a connected network shared drive.
 1. You can now treat the RDS space as if it's a local drive and drag and drop your image data to your RDS space.
 1. Shutting down or logging out of the system will automatically disconnect your RDS space. If you're using a communal computer you can also right click on the drive and select "eject" to ensure that the next person using the computer will not be able to add/delete your data.
-1. MacOS stupidly remembers the credentials of the first person to connect to a shared drive and reuses these to connect subsequently. The only way to get the computer to forget the credentials and login to the server with different credentials is to restart.
+1. MacOS stupidly remembers the credentials of the first person to connect to a shared drive and reuses these to connect subsequently.  To connect with a different user, you must use the username in the server path and trigger a password prompt by appending a colon and asterisk (:\*).
+1. Type the server address so that MacOS uses a new username: `smb://new_username:*@server_address/share_name`
 {{< column >}}
 {{< figure
     src="MacOSConnectToServer.png"
