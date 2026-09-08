@@ -5,7 +5,7 @@ layout = "simple"
 
 ## Overview
 Getting started imaging with our resources requires:
-- **[An account in Stratocore PPMS](RequestingANewInternalUserAccountInStratocore.pdf)** --- for booking and billing.
+- **[An account in Stratocore PPMS](stratocoreIntro.pdf)** --- for booking and billing.
 - **Training** --- so that you don't damage the equipment or yourself.
 - **Physical Access** --- so that you can get into the rooms where the microscopes live.
 - **A strategy to manage your image data** --- to keep our acquisition computers from filling up with data and as a means for you to have access to your data.
