@@ -27,7 +27,7 @@ Our system specifications:
 
 ### Sample Preparation and Fluorophore Selection for STED Microscopy
 
-Sample Preparation and microscope information PDF document: [Sample Prep Info](samplePrep.pdf)
+#### Sample Preparation and microscope information PDF document: [Sample Prep Info](samplePrep.pdf)
 
 In STED microscopy, sample preparation is a critical determinant of image quality and achievable spatial resolution. Unlike conventional fluorescence microscopy, where resolution is primarily constrained by diffraction, the performance of STED microscopy is frequently limited by the quality of specimen preparation, labelling efficiency, and fluorophore behaviour. Because STED imaging relies on high-intensity depletion laser irradiation to restrict fluorescence emission to sub-diffraction volumes, samples must exhibit a high signal-to-noise ratio, minimal background fluorescence, and excellent structural preservation. Consequently, fixation protocols should preserve cellular ultrastructure while maintaining antigen accessibility, and labelling strategies should provide sufficient fluorophore density to accurately represent nanoscale biological features. Inadequate fixation, low labelling efficiency, or non-specific staining can introduce artefacts that compromise both image fidelity and effective resolution.
 
