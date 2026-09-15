@@ -88,7 +88,7 @@
 
 [[main]]
   parent = "Systems"
-  name = "Abberior Mirava STED"
+  name = "Mirava Polyscope"
   pageRef = "systems/STED"
   weight = 5
 
