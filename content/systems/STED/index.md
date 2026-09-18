@@ -11,19 +11,29 @@ heroStyle = 'background'
 
 [abberior’s MIRAVA® POLYSCOPE®](https://abberior.rocks/superresolution-confocal-systems/mirava-polyscope/) combines confocal with STED to extend resolution beyond diffraction-limited imaging.
 
+[Video Overview](https://mediaspace.epfl.ch/media/MIRAVA+Abberior/0_ostaquci) of the system and detailed explanation of the LiGHTBOX software for image acquisition from the EPFL. One hour length.
+
+NB - Our system does NOT have the MiNFLUX module, the MATRIX array detector or the TIMEBOW FLIM option.
+
+[Link](https://github.com/stephenogg/cdn-microscopy/releases/tag/0.0.1) to download the software to install on your own computer. Select either the MacOS (dmg) version or the Windows installer (msi).
+
+
 Our system specifications:
 - IX83 Olympus motorised, inverted stand
 - coolLED excitation for sample finding, focusing
+- single quadband (DAPI/FITC/Cy3/Cy5) filter for wf imaging
+- XYZ motorised stage. 200 micrometer z-range
 - 4 excitation laser lines: 405nm, 485nm, 561nm, and 640nm
 - Point Scanner with a line frequency of up to 2.6KHz.
-- UPLXAPO 60X/1.42 Oil immersion lens for confocal and STED imaging
+- UPLXAPO 60X/1.42 Oil immersion lens for confocal and STED imaging (0.15mm working distance)
 - Confocal resolution: ~ 250nm lateral, 750nm Z 
 - 775nm STED depletion laser for 2D & 3D STED
 	- 2D STED resolution: 30nm
-	- 3D STED resolution: 100nm isotropic
+	- 3D STED resolution: 80nm isotropic
 - 3 APDs with 65% QE and dark counts < 250Hz
-- RAYSHAPE adaptive optics to minimise spherical aberration
+- RAYSHAPE adaptive optics system for all beams (excitation, emission, and depletion). Minimize spherical abberation for deep imaging.
 - TRUESHARP deconvolution
+- FLSEXPOSURE Adaptive illumination package for highest resolution and live-cell super-resolution imaging at ultra-low light levels (RESCue, DyMIN)
 
 ### Sample Preparation and Fluorophore Selection for STED Microscopy
 
