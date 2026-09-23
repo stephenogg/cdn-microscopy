@@ -11,7 +11,7 @@ heroStyle = 'background'
 
 [abberior’s MIRAVA® POLYSCOPE®](https://abberior.rocks/superresolution-confocal-systems/mirava-polyscope/) combines confocal with STED to extend resolution beyond diffraction-limited imaging.
 
-[Video Overview](https://mediaspace.epfl.ch/media/MIRAVA+Abberior/0_ostaquci) of the system and detailed explanation of the LiGHTBOX software for image acquisition from the EPFL. One hour length.
+[Video Overview](https://mediaspace.epfl.ch/media/MIRAVA+Abberior/0_ostaquci) of the system and detailed explanation of the LiGHTBOX software for image acquisition made by Abberior, hosted by EPFL. One hour length.
 
 NB - Our system does NOT have the MiNFLUX module, the MATRIX array detector or the TIMEBOW FLIM option.
 
@@ -46,3 +46,57 @@ The choice of fluorophore is particularly important in STED microscopy. Not all 
 > In STED microscopy, image quality is often limited less by the optical system than by the quality of sample preparation and fluorophore selection. Even the highest-performing STED instrument cannot recover structural information that has been lost through poor preservation, insufficient labelling, or photobleaching.
 
 
+### Tutorial
+
+##### Step by Step --- Quickstart --- TL;DR
+{{< timeline >}}
+
+{{% timelineItem icon="1" header=" " subheader="Turn **ON** the system" badge="start here" %}}
+
+- Turn on the computer.
+- Turn on the controllers.
+- Turn on the Microscope Stand Touch Panel - wait until it's completely initialised.
+- Login to the computer iwth your King's credentials.
+- Open the LiGHTBOX Software.
+- If you're first user of the day, click **Yes** when the system asks you whether you want to turn the microscope ON.
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="2" header=" " subheader="Focus your sample" badge="Fluorescence/Brightfield Imaging" %}}
+
+- Select "FL" on the microscope touch panel.
+- Switch the LED **ON**
+- Select appropriate wavelength for LED excitation.
+- Alternatively, select "BF" on the microscope controller for Brightfield imaging.
+- Select the "DIA" pane to control the lamp brightness.
+- Focus --- Clockwise moves the lens down.
+- 
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="3" header=" " subheader="Find a field of view." badge="Fluorescence/Brightfield Imaging" %}}
+
+- X/Y Stage Control: top dial moves X, bottom dial moves Y.  Third dial does nothing.
+- +/- change the speed of the stage
+- Press the green LED on the front of the stage (yes, it's also a button) to release the stage for manual movement.
+- Press the green LED again to lock the stage and transfer control back to the dial controller.
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="4" header=" " subheader="Change the default save location." badge="Pre-Acquisition Setup" %}}
+
+- From the "Welcome" hamburger menu, select "change default save location".
+- Initially, the default is "C:\User\abberior\Documents\Pictures"
+- Select the D: drive and sub-folder with your name. (Create your folder first, if needed.)
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="5" header=" " subheader="Acquisition Setup." badge="Pre-Acquisition Setup" %}}
+
+- From the "Welcome" hamburger menu, select "change default save location".
+- Initially, the default is "C:\User\abberior\Documents\Pictures"
+- Select the D: drive and sub-folder with your name. (Create your folder first, if needed.)
+
+{{% /timelineItem %}}
+
+{{< /timeline >}}
