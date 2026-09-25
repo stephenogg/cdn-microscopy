@@ -48,42 +48,62 @@ The choice of fluorophore is particularly important in STED microscopy. Not all 
 
 ### Tutorial
 
-##### Step by Step --- Quickstart --- TL;DR
+
+
+Click on the thumbnail for a copy of the complete imaging manual.[![](ManualTitlePage.png)](ImspectorManual2023-05.pdf)
+
+#### Step by Step --- Quickstart --- TL;DR
+
 {{< timeline >}}
 
 {{% timelineItem icon="1" header=" " subheader="Turn **ON** the system" badge="start here" %}}
 
-- Turn on the computer.
-- Turn on the controllers.
-- Turn on the Microscope Stand Touch Panel - wait until it's completely initialised.
-- Login to the computer iwth your King's credentials.
+- Turn on the computer (It's on already).
+- Turn on the IX-83 stand controller and the coolLED controller (<span style="color: black; background-color: yellow;">1</span> & <span style="color: black; background-color: yellow;">2</span>)
+- Turn on the Microscope Stand Touch Panel (<span style="color: black; background-color: yellow;">3</span>) - wait until it's completely initialised.
+- Login to the computer with your King's credentials.
 - Open the LiGHTBOX Software.
-- If you're first user of the day, click **Yes** when the system asks you whether you want to turn the microscope ON.
+- Starting the software will power up the complete system. The STED laser will begin to warm up.
+- Allow 30m warmup prior to imaging.
+- After starting the LiGHTBOX software, wait until the ‘Welcome’ screen of the LiGHTBOX appears.
+- In the right, upper corner of the ‘Welcome’ screen, a system status indicator is displayed.
+- Hovering over the system status indicator brings up a list of all modules and their specific status info.
 
 {{% /timelineItem %}}
 
-{{% timelineItem icon="2" header=" " subheader="Focus your sample" badge="Fluorescence/Brightfield Imaging" %}}
+{{% timelineItem icon="2" header=" " subheader="Auto-Alignment" badge="Pre-Acquisition Setup" %}}
 
+- If you're the first user of the day, you must perform an auto-alignment.
+- Make sure you have turned on the microscope and allowed the STED laser to warm up for > 30m
+- Obtain the autoalignment slide from Steve.
+- Mount the autoalignment slide on the system. 
+- From the "Measurement" menu, choose 'Auto alignment'.
+- Let the alignment complete. It should take 2 to 5 minutes.
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="3" header=" " subheader="Focus your sample" badge="Fluorescence/Brightfield Imaging" %}}
+
+- Place your sample on the stage.
 - Select "FL" on the microscope touch panel.
 - Switch the LED **ON**
 - Select appropriate wavelength for LED excitation.
-- Alternatively, select "BF" on the microscope controller for Brightfield imaging.
-- Select the "DIA" pane to control the lamp brightness.
-- Focus --- Clockwise moves the lens down.
-- 
+- Alternatively, select "BF" on the microscope touch panel for Brightfield imaging.
+- Select the "DIA" pane on the touch panel to control the lamp brightness.
+- Focus --- Clockwise moves the lens down, away from your sample.
 
 {{% /timelineItem %}}
 
-{{% timelineItem icon="3" header=" " subheader="Find a field of view." badge="Fluorescence/Brightfield Imaging" %}}
+{{% timelineItem icon="4" header=" " subheader="Find a field of view." badge="Fluorescence/Brightfield Imaging" %}}
 
 - X/Y Stage Control: top dial moves X, bottom dial moves Y.  Third dial does nothing.
 - +/- change the speed of the stage
 - Press the green LED on the front of the stage (yes, it's also a button) to release the stage for manual movement.
-- Press the green LED again to lock the stage and transfer control back to the dial controller.
+- Press the green LED again to lock the stage and transfer control back to the stage controller.
 
 {{% /timelineItem %}}
 
-{{% timelineItem icon="4" header=" " subheader="Change the default save location." badge="Pre-Acquisition Setup" %}}
+{{% timelineItem icon="5" header=" " subheader="Change the default save location." badge="Pre-Acquisition Setup" %}}
 
 - From the "Welcome" hamburger menu, select "change default save location".
 - Initially, the default is "C:\User\abberior\Documents\Pictures"
@@ -91,11 +111,97 @@ The choice of fluorophore is particularly important in STED microscopy. Not all 
 
 {{% /timelineItem %}}
 
-{{% timelineItem icon="5" header=" " subheader="Acquisition Setup." badge="Pre-Acquisition Setup" %}}
+{{% timelineItem icon="6" header=" " subheader="Choose Your Dyes." badge="Acquisition Setup" %}}
 
-- From the "Welcome" hamburger menu, select "change default save location".
-- Initially, the default is "C:\User\abberior\Documents\Pictures"
-- Select the D: drive and sub-folder with your name. (Create your folder first, if needed.)
+- From the "Welcome" menu, choose **'New Sample'**.
+- Select dyes from the list that are in your sample. Drag and drop them from the left to the right side of the screen.
+- Optional, enter a sample name in the **'Sample Name'** field.
+- Optional, enter details about each dye.
+- Optional, enter experimental details in the **'Notes'** section.
+- Select a colormap for each dye, or select a preset group by clicking on **'Single Color'** or **'Overlay color'** text. 
+- Press the **'START'** button
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="7" header=" " subheader="Preview Scan" badge="Preview" %}}
+
+- Click **'PREVIEW'** to continuously scan the currently selected sample position.
+- During the preview scan, the sample position can be adjusted by clicking and dragging the image in the display, or by moving the stage with the stage controller
+- During the preview scan, the sample focus can be adjusted by adjusting the focus wheel on the Z-Drive (NB - this moves the lens), or by using the mouse wheel when the cursor is placed over the image (This moves the z-piezo stage).
+- Clicking **'PREVIEW'** again stops the scan at the next complete image, clicking **'STOP'** stops the scan immediately.
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="8" header=" " subheader="Overview & Sample Map" badge="Create an Overview" %}}
+
+- To acquire a larger overview scan, click **‘EXPLORE’**. 
+- This opens the ‘NEW OVERVIEW’ dialogue where the desired overview size can be defined by specifying the number of Fields of View (FOVs), to be acquired.
+- Clicking **'NEW OVERVIEW'** will start a spiral scan of the requestsed number of FOVs starting at the current position.
+> [!TIP] To facilitate accurate stitching of acquired tiled images, an overlap of 10% is recommended. 
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="9" header=" " subheader="The Image Tree" badge="Organising Your Data" %}}
+
+- All overviews and images acquired in one session will be listed in an **‘Image Tree View’** on the left side of the screen.
+- When the first overview of a sample is acquired, it is automatically placed in 'Folder 1'.
+- To create a new folder, click the ‘plus’ icon in the lower-right corner in the Tree View and select 'New Folder' from the drop-down menu.
+- Overviews and images can be moved between folders at any time by clicking and holding the desired item, then dragging and dropping it into the target folder.
+- To rename a folder, double-click its default name (e.g. Folder 1) and enter the desired name.
+- For further organization, acquired overviews and images can also be sorted or filtered.
+- To access the sorting and filtering options, click the sorting or funnel icon above the Tree View.
+- Delete an image by selecting it in the image tree, choosing the three dots and selecting Delete or by pressing the <kbd>delete</kbd> key.
+> [!CAUTION] After selecting **Delete**, the images are deleted immediately and irretrievably.
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="ellipsis-solid-full" header=" " subheader="Saving Data" badge="Saving Your Data" %}}
+
+- Images in the current session can be saved by selecting the sample name (e.g. 'Sample 1'), clicking the three-dot menu and selecting 'Save as Copy'.
+- This opens a Windows file explorer where the desired destination folder can be selected. Click 'SAVE' to store all images in the tree as an *'.obf'* file.
+> [!NOTE]+ Opening .obf Files in Fiji:
+> drag and drop your *.obf* file directly into the Fiji window. The built-in Bio-Formats plugin will automatically recognise the format.
+- Alternatively, selecting **'New Sample'** saves the current sample into the default save location and returns the user to the dye selection menu.
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="check-solid-full" header=" " subheader="Overview To Image" badge="Acquisition" %}}
+
+- Regions of interest (ROIs) can be selected in overviews and images to acquire high-quality/high-resolution data of the regions.
+- To select an ROI, select the **'Draw image region'** button in the [Tools menu](ToolsMenu.png) right to the Acquisition menu.
+- The Tools Menu is located next to the Scan menu. The active tool is displayed in <span style="color: orange;">orange</span>.
+- When the ROI tool is selected, an ROI can be drawn in the overview or any previous image by clicking and dragging with the mouse cursor.
+- Hovering over one of the corners of the ROI will activate a small orange arc. Selecting the arc allows rotation of the ROI.
+> [!TIP] If the ROI exceeds the maximum field of view, a tiled image is automatically acquired. This is indicated by faint lines that split up the ROI into the number of individual tiles that will be acquired.
+- Clicking the **'PREVIEW'** button in the Acquisition window results in continuous scanning of the ROI.
+- Clicking the **'ACQUIRE'** button starts a single scan of the entire ROI.
+
+{{% /timelineItem %}}
+
+
+{{< /timeline >}}
+
+
+
+{{< timeline >}}
+
+{{% timelineItem icon="1" header=" " subheader="Acusition Settings" badge="GENERAL" %}}
+{{< katex >}}
+- General settings for image acquisition can be controlled via the Acquisition drop-down menu, located in [‘SCANNING’ tab](Scan.png) in the Measurement window.
+- Opening the 'Acquisition' menu reveals its tab-structure, including the ['GENERAL' tab](General.png) which allows general settings for confocal and STED imaging to be defined.
+- Prevent Detector Saturation:
+	-The APDs used to detect photons saturate if the photon count rises to more than 10,000,000/second.
+	- Set % Excitation for each channel so that the max counts in the image (displayed above the image) divided by the pixel dwell time is < 10,000,000. E.g. if pixel dwell time is 5µs, the counts in each channel should not exceed 50 because: \(\dfrac{50}{5 X 10^{-6}} = 10,000,000\)
+	- Use the mouse scroll wheel to increase/decrease the laser power by 1% increments. The <kbd>alt</kbd> modifier while scrolling changes the increment to 0.1%. <kbd>Shift</kbd> changes it to 10%.
+	- To increase the signal, use more line accumulations.
+- Set the pixel size according to your requirements. For confocal imaging, our lens requires 80nm pixels to achieve best (diffraction-limited) resolution. 
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="2" header=" " subheader="Acusition Settings" badge="STED" %}}
+
+- A STED image can be added by selecting the ‘plus’ symbol in the Acquisition menu below the STED heading.
+- A STED channel (indicated by the donut symbol) will open below the confocal channel. 
 
 {{% /timelineItem %}}
 
