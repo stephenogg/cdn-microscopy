@@ -11,7 +11,8 @@ heroStyle = 'background'
 
 [abberior’s MIRAVA® POLYSCOPE®](https://abberior.rocks/superresolution-confocal-systems/mirava-polyscope/) combines confocal with STED to extend resolution beyond diffraction-limited imaging.
 
-[Video Overview](https://mediaspace.epfl.ch/media/MIRAVA+Abberior/0_ostaquci) of the system and detailed explanation of the LiGHTBOX software for image acquisition made by Abberior, hosted by EPFL. One hour length.
+Video Introduction to the Mirava Polyscope:
+{{< youtubeLite id="Hbceyx8xY2I" label="Mirava STED Introduction" title="An Introduction to the Mirava polyscope" >}}
 
 NB - Our system does NOT have the MiNFLUX module, the MATRIX array detector or the TIMEBOW FLIM option.
 
@@ -50,7 +51,7 @@ The choice of fluorophore is particularly important in STED microscopy. Not all 
 
 
 
-Click on the thumbnail for a copy of the complete imaging manual.[![](ManualTitlePage.png)](ImspectorManual2023-05.pdf)
+Click on the thumbnail for a copy of the complete imaging manual.[![](ManualTitlePage.png)](LiGHTBOXmanual.pdf)
 
 #### Step by Step --- Quickstart --- TL;DR
 
@@ -64,7 +65,7 @@ Click on the thumbnail for a copy of the complete imaging manual.[![](ManualTitl
 - Login to the computer with your King's credentials.
 - Open the LiGHTBOX Software.
 - Starting the software will power up the complete system. The STED laser will begin to warm up.
-- Allow 30m warmup prior to imaging.
+- Allow 30 min warmup prior to imaging.
 - After starting the LiGHTBOX software, wait until the ‘Welcome’ screen of the LiGHTBOX appears.
 - In the right, upper corner of the ‘Welcome’ screen, a system status indicator is displayed.
 - Hovering over the system status indicator brings up a list of all modules and their specific status info.
@@ -201,7 +202,16 @@ Click on the thumbnail for a copy of the complete imaging manual.[![](ManualTitl
 {{% timelineItem icon="2" header=" " subheader="Acusition Settings" badge="STED" %}}
 
 - A STED image can be added by selecting the ‘plus’ symbol in the Acquisition menu below the STED heading.
-- A STED channel (indicated by the donut symbol) will open below the confocal channel. 
+- A STED channel (indicated by the donut symbol) will open below the confocal channel.
+- set the STED laser power
+> [!TIP]+ STED Power
+> The STED Power and the image resolution do not correlate linearly. Even with low STED power, a significant increase in resolution is obtained. For defining the optimal STED Power, test several different STED powers on the sample and verify which STED power stops providing an increase in resolution. 
+
+{{% /timelineItem %}}
+
+{{% timelineItem icon="3" header=" " subheader="Acusition Settings" badge="Further reading" %}}
+
+- For further more detailed instructions, [download](LiGHTBOXmanual.pdf) the instruction manual. 
 
 {{% /timelineItem %}}
 

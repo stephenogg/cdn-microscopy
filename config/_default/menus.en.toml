@@ -175,8 +175,14 @@ parent = "Training"
 
 [[main]]
 parent = "Training"
-  name = "Tutorials"
+  name = "QuPath Tutorials"
   pageRef = "training/tutorials"
+
+[[main]]
+parent = "Training"
+  name = "Mirava Tutorial"
+  pageRef = "training/mirava"
+
 
 [[subnavigation]]
   name = "Get Started"
