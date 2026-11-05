@@ -88,6 +88,12 @@
 
 [[main]]
   parent = "Systems"
+  name = "EVOS M3000"
+  pageRef = "systems/EVOS-M3000"
+  weight = 3
+
+[[main]]
+  parent = "Systems"
   name = "Mirava Polyscope"
   pageRef = "systems/STED"
   weight = 5
