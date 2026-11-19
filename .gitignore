@@ -1,4 +1,23 @@
 .hugo_build.lock
-node_modules/
 public/
 resources/
+# Ignore environment and secret files
+.env
+*.pem
+
+# Ignore dependencies
+node_modules/
+venv/
+
+# Ignore build outputs and logs
+dist/
+build/
+*.log
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore AI generated files for review
+
+review/

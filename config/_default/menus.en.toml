@@ -176,6 +176,16 @@
 
 [[main]]
 parent = "Training"
+  name = "Safety"
+  pageRef = "training/safety"
+
+[[main]]
+parent = "Training"
+  name = "Which Microscope When?"
+  pageRef = "training/which-microscope-when"
+
+[[main]]
+parent = "Training"
   name = "Getting Started"
   pageRef = "training/getting-started"
 

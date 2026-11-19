@@ -1,183 +1,82 @@
 +++
-date = '2025-08-29T09:48:20+01:00'
-draft = false
+title = 'Map a Network Drive (RDS)'
 layout = "simple"
-title = 'Map Network Drive'
 +++
-## Overview
-The acquisition computer filesystem is meant for *temporary* storage of data acquired by the microscopes. Part of the imaging workflow --- after acquisition --- is to manage your data. Initially this means you must move the data somewhere for permanent storage, archiving and backup. To achieve this on our acquisition systems, you mount a network share as a local drive during your session. This allows you to drag and drop your files from the local computer's hard disk drive to the network computer's hard disk drive. The process of adding a network shared drive to a local system is known as "mapping a network drive". The following instructions describe one way to mount network shared drives on microscope acquisition systems. Our acquisition systems use *Windows* as the operating system.
-### Prerequisites
-To mount a network shared drive, you must have access to a network shared drive (obviously). At King's, institutionally provided data storage is managed through [*King's Computational Research, Engineering and Technology Environment*](https://er.kcl.ac.uk).
-{{< alert icon="play" cardColor=#3b82f6 >}}[Request RDS from e-Research](https://docs.er.kcl.ac.uk/research_data/rds_requesting_access/){{< /alert >}}
 
-### The Procedure
+## Why this matters
 
-<details>
-  <summary>{{< icon "microsoft" >}} Windows</summary>
-There are several ways to successfully mount a network location as a local drive so that you can copy your data to the network drive and then delete it from the local drive. The following method uses the Windows GUI.
+The acquisition computers store data **temporarily**. Copy your data to King's Research Data Storage (RDS) after every session. Then delete it from the acquisition computer **after checking the copy**.
 
-{{< timeline >}}
-{{< timelineItem icon="1" md="true" >}}
-Select 'This Computer' in the navigation pane of an explorer window.
-{{< /timelineItem >}}
-{{< timelineItem icon="2" >}}
-Right-click on the computer icon, revealing the contextual menu.
-{{< /timelineItem >}}
-{{< timelineItem icon="3" >}}
-Select "Map Network Drive" from the contextual menu.
-{{< figure
-    src="mapNetworkDrive1.png"
-    default=true
-    width="300"
-    >}}
-{{< /timelineItem >}}
-{{< timelineItem icon="4" >}}
- This will cause a new pane to open, asking for information about how to map the network drive.
- <ul>
- <li>The drive letter can be anything that is not currently in use.</li>
- <li>In the "Folder" field, enter the path to your RDS share, starting with two backslashes. At acquisition and analysis workstations, be sure to add the "hsrn" between the rds and the er portions of the address, this ensures your data travels across the <u>h</u>igh <u>s</u>peed <u>r</u>esearch <u>n</u>etwork. Leave out the "hsrn" from the string when using another computer in your lab.</li> 
+You do this by connecting ("mapping") your RDS folder as a drive for the duration of your session.
 
-<li>e.g.
-    <ul>
-    <li><i>\\rds.hsrn.er.kcl.ac.uk\prj\dn_cdn_microscopy</i> Would be my path from an acquisition system.</li>
-    <li><i>\\rds.er.kcl.ac.uk\prj\dn_cdn_microscopy</i> would be my path from any other non-acquisition system.</li>
-    </ul>
-</li>
-<li>Make sure the "Connect using different credentials" tickbox <i>is</i> ticked and the "Reconnect at sign-in <em>is</em> <em><strong>NOT</strong></em> ticked.</li>
-<li>In this context, "different credentials" means different to the ones used to login to the local acquisition computer.
-</li>
-<li>Clicking "Finish" will cause a pop-up window to appear where you can add your credentials.</li>
-</ul>
-{{< figure
-    src="mapNetworkDrive.png"
-    default=true
-    width="300"
-    >}}
-{{< /timelineItem >}}
-{{< /timeline >}}
+## Before you start
 
+You need an RDS project folder. If you don't have one:
 
-{{< timeline >}}
-{{< timelineItem icon="5" subheader="Authenticate" >}}
-Depending on the verion of Windows you are using, this window may differ significantly.
-<ul>
-<li>Enter your user name in the user field in the format: KCLAD\k########</li>
-<li>Enter your password in the password field, press "OK".</li>
-</ul>
+{{< alert icon="play" cardColor=#3b82f6 >}}[Request RDS from Advanced REsearch Computing](https://rds-admin.er.kcl.ac.uk/){{< /alert >}}
 
-If everything is entered correctly and the moon is in the right phase, then your folder on RDS will appear in an explorer window. You can now treat the RDS space as if it's a local drive and drag and drop your image data to your RDS space. Shutting down or logging out of the system will automatically disconnect your RDS space. You can also right click on the drive and "disconnect" to ensure that the next person using the microscope will not be able to add/delete data in your space. 
+You also need your k-number and King's password.
 
-{{< figure
-    src="credentials.png"
-    default=true
-    width=300
-    >}}
+## Which address do I use?
 
-{{< /timelineItem >}}
-{{< /timeline >}}
+| You are on... | Address format |
+|---|---|
+| A facility **acquisition or analysis** computer (Windows) | `\\rds.hsrn.er.kcl.ac.uk\prj\<your_project>` (high-speed research network) |
+| Any other Windows computer | `\\rds.er.kcl.ac.uk\prj\<your_project>` |
+| macOS or Linux | `smb://rds.er.kcl.ac.uk/prj/<your_project>` |
 
-</details>
+Example project: `dn_cdn_microscopy`. Off campus or on Wi-Fi, you may first need a VPN ([e-Research OpenVPN guide](https://docs.er.kcl.ac.uk/CREATE/tools/openvpn/)).
 
-<details>
-  <summary>{{< icon "apple" >}} MacOS</summary>
-  
-#### Step By Step
+## Windows
 
-None of the connection steps below will be successful if you are using 
-your own computer and are on the King's wireless network. If you repeatedly 
-fail to connect, please see this [e-research documentation](https://docs.er.kcl.ac.uk/CREATE/tools/openvpn/) 
-explaining how to install an OpenVPN client for MacOS. 
+1. Open File Explorer and select **This PC**.
+2. Right-click **This PC** and choose **Map network drive**.
+3. Choose any unused drive letter.
+4. In **Folder**, type your address from the table above.
+5. Tick **Connect using different credentials**.
+6. **Untick Reconnect at sign-in.**
+7. Click **Finish**.
+8. Enter your username as `KCLAD\k1234567` (your own k-number) and your password.
+9. **Untick "Remember my credentials"** if shown.
+10. Your RDS folder opens. Copy your files across.
 
-{{< columns >}}
-1. With the finder active, click on ⌘+K to bring up the "Connect to Server" dialogue box.
-1. Enter the path to your RDS share in the "Server Address:" field, starting with "smb://"
+{{< figure src="mapNetworkDrive1.png" default=true width="300" >}}
+{{< figure src="mapNetworkDrive.png" default=true width="300" >}}
+{{< figure src="credentials.png" default=true width=300 >}}
 
-{{< alert cardColor=#3b82f6 >}}
-None of our acquisition computers runs MacOS, so you will always connect to your RDS using the following format:
-{{< /alert >}}
-    - e.g. ***smb://rds.kcl.ac.uk/prj/dn_cdn_microsocpy***
-    
-1. Click "Connect" to initialise the connection, which initiates the authentication process.
-1. When the authentication window appears, enter your credentials in the following format:
-    - Username: DOMAIN\username --- i.e. KCLAD\k###########
-    - Password: Your password for that account.
-1. The RDS share should appear as a connected network shared drive.
-1. You can now treat the RDS space as if it's a local drive and drag and drop your image data to your RDS space.
-1. Shutting down or logging out of the system will automatically disconnect your RDS space. If you're using a communal computer you can also right click on the drive and select "eject" to ensure that the next person using the computer will not be able to add/delete your data.
-1. MacOS stupidly remembers the credentials of the first person to connect to a shared drive and reuses these to connect subsequently.  To connect with a different user, you must use the username in the server path and trigger a password prompt by appending a colon and asterisk (:\*).
-1. Type the server address so that MacOS uses a new username: `smb://new_username:*@server_address/share_name`
-{{< column >}}
-{{< figure
-    src="MacOSConnectToServer.png"
-    default=true
-    height="50px"
-    >}}
-{{< figure
-    src="MacOSConnect2.png"
-    default=true
-    height="50px"
-    >}}
-{{< endcolumns >}} 
-{{< columns >}}
-{{< figure
-    src="Connect3.png"
-    default=true
-    height="50px"
-    >}}
-    {{< column >}}
-{{< figure
-    src="authenticate.png"
-    default=true
-    height="50px"
-    >}}
-{{< endcolumns >}}  
-</details>
+### When you finish
 
- <details>
- <summary>{{< icon "ubuntu" >}} Linux</summary>
+1. Check the copied files open and the sizes match.
+2. Delete your data from the acquisition computer.
+3. Right-click the drive and choose **Disconnect**. Logging out also disconnects, but do it yourself so the next user cannot reach your data.
 
-1. Open the Files application.
-{{< figure
-    src="linux/files-launch.png"
-    default=true
-    height="50px"
-    >}}
-1. Navigate to the “Other Locations” section from the sidebar menu.
-{{< figure
-    src="linux/files-main.png"
-    default=true
-    height="50px"
-    >}}
-1. Locate the network hosts under the “Networks” section or enter the host's IP address with the smb: prefix and click Connect.
-1. Enter the shared drive path in the following format:
-    - ***smb://rds.kcl.ac.uk/prj/dn_cdn_microsocpy***
-{{< figure
-    src="linux/files-other-locations.png"
-    default=true
-    height="50px"
-    >}}
-1. Choose the shared folder you wish to access.
-{{< figure
-    src="linux/files-other-locations-folders.png"
-    default=true
-    height="50px"
-    >}}
-1. Select “Connect” with Registered User selected. Enter login credentials and click Connect.
-    - Username = your username
-    - DOMAIN = KCLAD
-    - Password = your password
+### It didn't connect?
 
-{{< figure
-    src="linux/files-other-locations-folders-authenticate-registered.png"
-    default=true
-    height="50px"
-    >}}
-1. Access the files and folders provided by the remote host.
+- Check the address for typos and the `hsrn` part.
+- Check you used `KCLAD\` before your k-number.
+- Confirm your RDS access has been approved.
+- Still stuck? Email [the facility manager](mailto:stephen.ogg@kcl.ac.uk).
 
-1. Unmount the shared folder by clicking the eject icon when finished.
-{{< figure
-    src="linux/files-other-locations-folders-unmount.png"
-    default=true
-    height="50px"
-    >}}
-</details>
+## macOS
+
+You are using your own computer, so use the `rds.er` address.
+
+1. In Finder, press <kbd>⌘</kbd>+<kbd>K</kbd>.
+2. Enter the `smb://` address and click **Connect**.
+3. Enter `KCLAD\k1234567` and your password.
+4. Drag and drop your files into the share.
+5. When finished, eject the drive.
+
+macOS remembers the first account used. To connect as a different user, use `smb://new_username:*@server_address/share_name`.
+
+{{< figure src="MacOSConnectToServer.png" default=true height="50px" >}}
+{{< figure src="authenticate.png" default=true height="50px" >}}
+
+## Linux
+
+1. Open **Files**, then **Other Locations**.
+2. In **Connect to Server**, enter the `smb://` address.
+3. Choose **Registered User**; set Username to your k-number, Domain to `KCLAD`, and enter your password.
+4. Copy your files, then unmount with the eject icon.
+
+{{< figure src="linux/files-other-locations.png" default=true height="50px" >}}

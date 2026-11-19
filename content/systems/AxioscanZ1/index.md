@@ -1,192 +1,130 @@
 +++
-date = '2025-08-29T09:39:42+01:00'
-draft = false
-title = 'AxioscanZ1'
+title = 'Axioscan.Z1 Slide Scanner'
 layout = 'simple'
-showHero = true
-heroStyle = 'background'
 +++
 
-<details>
-  <summary>{{< icon "chevron-down" >}} Overview</summary>
-
 ## Overview
-The AxioScan.Z1 is designed to scan the entire tissue on a slide. Our system is equipped to scan in brightfield or fluorescence modes. The system has an in built magazine to hold 100 3" X 1" slides. Once configured, the system is able to perform automated scanning by performing a pre-scan, identifying the tissue on the slide, creating a focus map, and then performing a scan using the selected instructions including magnifiation, mode, channels, exposure time and data saving location. 
 
-Fluorescence Specifications:
-- 7 LED light source [Zeiss Colibri](EN_product-info_Colibri-7_rel1-0.pdf) for fluorescence excitation:
-    - wavelengths: 385nm, 430nm, 475nm, 511nm, 555nm, 590nm, 630nm
-- Fluorescence Filter Cubes:
-    - [Fs38 (GFP)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489038-9901-000)
-    - [Fs43 (DsRed)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489043-9901-000)
-    - [Fs50 (Cy5)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/488050-9901-000)
-    - [Fs96 (DAPI)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489096-9100-000)
-- Lenses:
-    - 2.5X/0.05, Fluar 5X/0.25, Plan-Apochromat 10x/0.45, Plan-Apochromat 20x/0.8, Plan-Apochromat 40X/0.95 Corr
-- Cameras:
-    - Zeiss [AxioCam506 mono](EN_product-info_Axiocam-506_mono.pdf)
+The Zeiss Axioscan.Z1 automatically scans whole tissue sections on microscope slides in **brightfield** or **fluorescence**. It holds up to [100] standard slides (75 x 25 mm). For each slide it makes a preview, finds the tissue, builds a focus map and scans, all based on a saved **scan profile**.
 
-</details>
+Best for: histology, whole-section fluorescence, many slides of the same type. Not for: thick or uneven samples, live samples, or very high resolution (use a confocal).
 
+### Specifications
 
+| Item | Specification |
+|---|---|
+| Fluorescence light source | [Zeiss Colibri 7](EN_product-info_Colibri-7_rel1-0.pdf): 385, 430, 475, 511, 555, 590, 630 nm |
+| Filter cubes | [Fs38 (GFP)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489038-9901-000), [Fs43 (DsRed)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489043-9901-000), [Fs50 (Cy5)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/488050-9901-000), [Fs96 (DAPI)](https://www.micro-shop.zeiss.com/en/uk/shop/filterAssistant/filtersets/489096-9100-000) |
+| Objectives | 2.5x/0.05, Fluar 5x/0.25, Plan-Apo 10x/0.45, 20x/0.8, 40x/0.95 Corr (correction collar) |
+| Camera | [Zeiss Axiocam 506 mono](EN_product-info_Axiocam-506_mono.pdf) |
+| Software | ZEN 3.1 Slidescan |
 
-<details>
-  <summary>{{< icon "chevron-down" >}}Acquisition SOP</summary>
+## Before you scan: prepare your slides
 
-## SOP
-Wholeslide scanning requires a different mindset than *normal* fluorescence imaging. When imaging at a confocal, the user has complete control over the parameters to acquire an image and can instantly change these, using information in the acquired data to update the acquisition parameters. Whole slide imaging, in contrast, is completely automated. The goal is to offload the entire decision making process to the system. Users should be able to load the slides, select a file (Zeiss calls this a scan profile) that contains all the instructions to complete a scan, perform a preview scan, and then press the **scan** button. The system will then scan all the slides, freeing the user to perform other tasks.
-{{< columns >}}
-To accomplish this, the system needs to know basic things about the imaging, like:
-1. What type of contrast method you wish to use
-2. Objective Lens
-3. The exposure time
-4. What to call the file
-5. Where to store the file
+- Slides must be **clean, dry and fully cured**. No oil, no wet mountant, no dried mountant on the back or edges.
+- Coverslip fully attached, no labels or tape overhanging the slide.
+- Use **#1.5 coverslips** (see [Coverslip Thickness](/protocols/coverslip-thickness)). For the 40x/0.95 Corr objective, set its correction collar to the coverslip thickness.
+- Label written clearly on the frosted end; remove fingerprints.
 
-{{< column >}}
-Additionally and specifically for slide scanning, the system needs to know:
+## How slide scanning differs from confocal
 
-6. Which part of the slide contains your sample and which part of the sample you wish to scan.
-7. How to focus the sample.
-{{< endcolumns >}}
+On a confocal you adjust settings while you watch the image. On the Axioscan you decide everything **before** the scan, then the system runs unattended. So you need a good **scan profile**: one per sample type.
 
-{{< columns >}}
-<br/>
-<br/>
-{{< alert icon=circle-info >}} 
-Pdf to understand concepts in whole slide scanning    --->
-{{< /alert >}}
-{{< column >}}
-<a href="axio-scanz1-application-guide.pdf"><img src="applicationGuideCover.png" alt="Application Guide" width="150px" max-width="100%" style="margin:auto"></a>
-{{< endcolumns >}}
+The scan profile defines:
 
-In the Zeiss Zen slide scanning software, a file called the "scan profile" contains all of the scanning information. The challenge with slide scanning is to create a robust set of scan profiles that will work for all the slides of each of your sample types. Each sample type will require its own scan profile where all the decisions for that specific type of sample on that slide(s) are encoded.
-### Step by Step --- Quickstart --- TL;DR
+1. Contrast method (brightfield or fluorescence)
+2. Objective
+3. Channels and exposure times
+4. Which part of the slide to scan (tissue detection)
+5. How to focus (focus map)
+6. File naming and storage location
+
+[Application guide (PDF): concepts in whole-slide scanning](axio-scanz1-application-guide.pdf)
+
+## Quick start
+
 {{< timeline >}}
 
-{{< timelineItem icon="1" header=" " subheader="Turn on the system" badge="start here" >}}
+{{< timelineItem icon="1" subheader="Switch on" badge="Start here" >}}
 <ul>
-    <li><a href="IMG_4739.JPG">Turn on the Scanner.</a> Wait until you think the scanner is initialised.</li>
-    <ul>
-        <li><a href="IMG_4739.JPG">There are two separate buttons to turn on the scanner.</a> One on the front and one near the power cable on the left.</li>
-        <li><a href="image1.png">The top left corner of the scanner will light up blue during initialisation and then turn green when it's ready.</a></li>
-    </ul>
-    <li>Turn on the Computer. Wait until the Windows desktop appears.</li>
-    <li><a href="zenIcon.png">Start the software. Wait until the splashscreen appears.</a></li>
-    <li><a href="SplashChoice.png">Click on the "ZEN Slidescan" button.</a> Wait until the system initialises in the software.</li>
+<li>Turn on the scanner. There are <a href="IMG_4739.JPG">two power buttons</a>: one on the front and one near the power cable on the left.</li>
+<li>The <a href="image1.png">top left corner</a> glows blue while initialising and turns <b>green</b> when ready.</li>
+<li>Turn on the computer and wait for the desktop.</li>
+<li>Open ZEN (<a href="zenIcon.png">icon</a>), wait for the splash screen, then click <a href="SplashChoice.png"><b>ZEN Slidescan</b></a>. Wait until initialisation finishes.</li>
 </ul>
 {{< /timelineItem >}}
 
-{{< timelineItem icon="2" subheader="Insert your slides" >}}
+{{< timelineItem icon="2" subheader="Load your slides" >}}
 <ul>
-    <li><a href="loadSlides.png">Place your slides into the slide carrier. Slide label must be near the silver clamp.</a></li>
-    <li><a href="loadingAid.png">You may need to use the slide loading aid if you have many slides.</a></li>
-    <li>Press the open/close button on the scanner. Wait until the door opens.</li>
-    <li><a href="loadSlides.jpg">Pull open one of the trays. It doesn't matter which one.</a></li>
-    <li><a href="loadSlides.jpg">Place the slide carrier(s) on the tray(s), coverslip up, labels closest to you.</a> Close the tray(s).</li>
-    <li>Press the open/close button to close the door. Wait until the system auto discovers the slide carrier(s) location(s).</li>
-    <li><a href="initialLoad.png">You will see a cartoon of your slides appear in the magazine tab of the acquisition software.</a></li>  
+<li>Put the slides into the <a href="loadSlides.png">slide carrier</a>; use the <a href="loadingAid.png">loading aid</a> for many slides. [Orientation: label near the silver clamp; coverslip up. Confirm with one photo.]</li>
+<li>Press the open/close button and wait for the door to open.</li>
+<li>Pull out any tray, place the carrier(s) on it, <a href="loadSlides.jpg">coverslip up</a>, and close the tray.</li>
+<li>Press open/close again. The scanner detects the carriers and a <a href="initialLoad.png">diagram of your slides</a> appears in the Magazine tab.</li>
 </ul>
 {{< /timelineItem >}}
-{{< timelineItem icon="3" subheader="Create a Scan Preview" >}}
+
+{{< timelineItem icon="3" subheader="Select a profile and preview" >}}
 <ul>
-    <li>Select the scan profile you wish to use. Each slide can have its own profile.</li>
-    <li>Push the "Preview scan" button. Wait for the preview.</li>
-    <li>Observe the previews to ensure the tissue has been identified correctly. Make any necessary modifications.</li>
-    <li>Select the storage location. This will likely be your folder on the Data drive.</li>
-    <li>Select the naming definition. Commonly, date + serial number.</li>
+<li>Choose the scan profile (each slide can have its own).</li>
+<li>Click <b>Preview scan</b> and wait.</li>
+<li>Check that the tissue has been found correctly; correct it if needed.</li>
+<li>Choose the storage location (your folder on the Data drive) and a naming rule (commonly date + serial number).</li>
 </ul>
 {{< /timelineItem >}}
-{{< timelineItem icon="4" subheader="Scan Your Slides" >}}
+
+{{< timelineItem icon="4" subheader="Scan" >}}
 <ul>
-    <li>Press the "Scan" button.</li>
-    <li>Your scans will be saved to your chosen location.</li>
-    <li>Remember, the acquisition computer is temporary storage.</li>
-    <li>Move your image data to your RDS storage location.</li>
+<li>Click <b>Scan</b>. Scans are saved to your chosen folder.</li>
+<li>When it finishes, unload your slides.</li>
+<li>Copy your data to RDS (see <a href="/protocols/map-network-drive">Map a network drive</a>) and delete it from the computer.</li>
 </ul>
 {{< /timelineItem >}}
-{{< /timeline >}}
-</details>
 
-<details>
-  <summary>{{< icon "chevron-down" >}} Creating a scan profile</summary>
-
-## Creating a Scan Profile
-Creating a scan profile is by far the most challenging part of the slide scanning workflow. In ZEN 3.1, there are "Wizards" that can help you through the initial steps of creating a scan profile. One wizard assumes you don't have a scanprofile and would like to create one from scratch. The other wizard allows you to adapt a prexisting scan profile for a new sample or new set of scan parameters. To start from scratch, click on the "Smart Profile Selection..." towards the top left of the UI, underneath the default scan profile pop-up list.
-{{< columns >}}
-{{< figure
-    src="SmartProfile.png"
-    nozoom=true
-    caption="Smart Profile Wizard"
->}}
-{{< column >}}
-{{< figure
-    src="step1.png"
-    nozoom=true
-    caption="Choose a Contrast Method"
->}}
-{{< endcolumns >}}
-{{< columns >}}
-{{< figure
-    src="step2.png"
-    nozoom=true
-    caption="Choose a Sample Configuration"
->}}
-{{< column >}}
-{{< figure
-    src="step3.png"
-    nozoom=true
-    caption="Choose a Staining Intensity"
->}}
-{{< endcolumns >}}
-
-1. The Wizard will open and guide you trhough a series of questions to create an initial base scan profile that will then need to be tailored to your samples. 
-
-1. Adapting this initial scan profile so that it is specific to your sample type with the second wizard.
-1. Defining the preview image parameters.
-1. Using the preview image to identify tissue sections on the slide.
-1. Creating a focus map.
-1. Defining the scan parameters.
-
-## Detailed Instructions
-{{< timeline >}}
-{{< timelineItem icon="1" subheader="Naming The Scan Profile" badge="Step 1" >}}
-
-{{< /timelineItem >}}
-{{< timelineItem icon="2" subheader="Creating a label image" badge="Step 2" >}}
-
-{{< /timelineItem >}}
-
-
-
-{{< timelineItem icon="3" md="true" subheader="Defining the preview image parameters" badge="Step 3" >}}
-> [!TIP] Information
-> For best results the red frame should cover the complete slide and some air
-around the edges. This will improve identification of areas to be used for automatic shading correction for brightfield imaging. To limit the range for the tissue detection use the red
-frame in the Tissue Detection Settings section in the subsequent step. Avoid
-placing the red frame covers the label area of the slide.
-
-{{< figure
-    src="preview.png"
-    alt="Preview Image"
-    caption="Include the entire slide within the red selection rectangle"
-    default="true"
-    width=400
-    >}}
-{{< /timelineItem >}}
-{{< timelineItem icon="4" subheader="Tissue identification" badge="Step 4" >}}
-
-{{< /timelineItem >}}
-{{< timelineItem icon="5" subheader="Creating a focus map" badge="Step 5" >}}
-
-{{< /timelineItem >}}
-{{< timelineItem icon="6" subheader="Defining the scan parameters" badge="Step 6" >}}
-
-{{< /timelineItem >}}
 {{< /timeline >}}
 
+## Shading correction
 
-</details>
-<details>
-    <summary><a href="https://stephenogg.github.io/cdn-microscopy/protocols/shading-reference/">Shading Correction SOP</a></summary>
-</details>
+Brightfield scans are shading-corrected automatically (include blank glass inside the preview frame). Fluorescence scans may need correction afterwards: see [Shading Correction](/protocols/shading-reference).
+
+## Creating a scan profile
+
+This is the hardest part of slide scanning. In ZEN 3.1, two wizards help:
+
+- **Smart Profile Selection** (top left, under the profile list): create a profile from scratch.
+- A second wizard adapts an existing profile to a new sample.
+
+{{< columns >}}
+{{< figure src="SmartProfile.png" nozoom=true caption="Smart Profile wizard" >}}
+{{< column >}}
+{{< figure src="step1.png" nozoom=true caption="Choose a contrast method" >}}
+{{< endcolumns >}}
+{{< columns >}}
+{{< figure src="step2.png" nozoom=true caption="Choose a sample configuration" >}}
+{{< column >}}
+{{< figure src="step3.png" nozoom=true caption="Choose a staining intensity" >}}
+{{< endcolumns >}}
+
+The workflow is:
+
+1. Name the profile.
+2. Set label-image options.
+3. Define the preview area.
+4. Define tissue detection.
+5. Create the focus map.
+6. Define scan parameters (objective, channels, exposure).
+
+> [!TIP] Preview frame
+> The red frame should cover the **whole slide plus some air** around the edges (this helps automatic shading correction in brightfield) but **not the label**. To limit tissue detection, use the red frame in the *Tissue Detection Settings* section in the next step.
+
+{{< figure src="preview.png" alt="Preview image" caption="Include the entire slide within the red rectangle" default="true" width=400 >}}
+
+
+
+## Common mistakes
+
+- Dirty, wet or sticky slides, or labels overhanging.
+- Preview frame cutting off tissue, or including the label.
+- Exposure set too high (saturation) in fluorescence.
+- Fluorescence slides scanned with shading correction already on, then corrected again.
+- Leaving data on the computer.
+

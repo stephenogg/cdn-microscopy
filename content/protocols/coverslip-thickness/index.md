@@ -1,50 +1,52 @@
 +++
-date = '2025-11-03T15:48:20+01:00'
-draft = false
+title = "Coverslip Thickness"
 layout = "simple"
-title = 'Coverslip Thickness'
 +++
 
-## Overview
-Many modern microscopy objectives are designed for a #1.5 (or 1.5H) coverslip of 0.17 mm (170 µm) thickness. Thicker or thinner coverslips can cause image blur due to spherical aberration and require using a correction collar on the microscope's objective lens for proper focus. It is crucially important to use the correct coverslip when imaging at the diffraction limit, e.g. with a high numerical aperture lens and sampling that results in pixels , ~100nm in size.
+## In short
 
-## Common coverslip thicknesses
-| Coverslip Number | Thickness (µm)|
-|:----------------:|:--------------|
-|#0| 85–130|
-|#1 |130–160|
-|#1.5 |160–190|
-|#2  |190–230|
-|#3 |240–350|
-|#4 |430–650|
+Use **#1.5H coverslips (170 ± 5 µm)** for all high-resolution imaging, and put your cells on the coverslip surface that faces the objective.
 
-## Microscope Objectives 
-One of the many pieces of information written onto every objective is the designed (or expected) coverslip thickness. On the following 40x oil immersion objectives from every major vendor, the number 0.17 can be found. This refers to the fact that a 0.17mm thick coverslip (of RI 1.525) was used during the design process of the lens. If you use a c/s with a different thickness, or no c/s at all, you will introduce aberrations into the image because you have not adhered to the assumptions of the lens designer.
-{{< figure
-    default=true
-    src="Objectives.png"
-    title="Objective Lenses Expect a Coverslip With Thickness 0.170 mm."
-    caption="40X objective lenses showing the 0.17mm coverslip thickness requirement."
-    width=500
-    >}}
+## Why it matters
 
-## Why should you care? 
-Using the incorrect coverslip for the objective used on the microscope will affect your final image. The following graph shows the degradation of signal intensity for different NA objectives for coverslips of varying thickness. If you are using an objective with an NA of 0.4 (20x objectives and above), you can lose much of your signal. For example, if you are using a 40x Air objective, and using a #1 coverslip you could expect to lose *60-80%* of the fluorescence signal! 
-{{< figure
-    default=true
-    src="IntensityVsThicknessError.png"
-    title="Intensity Vs. Error in C/S Thickness"
-    caption="source: [*Nikon Microscopy U*](https://www.microscopyu.com/microscopy-basics/coverslip-correction)"
-    width=500
-    >}}
- 
+Most high-NA objectives are designed for a 0.17 mm coverslip (refractive index about 1.52), shown as "0.17" on the objective barrel. A different thickness, or an extra layer between sample and lens, causes spherical aberration. This blurs the image, lowers resolution and reduces signal. The effect increases with NA and is most important when you image at the diffraction limit (for example, pixels of about 100 nm).
 
-## Imaging Cells
-The expectation of the lens manufacturer is that your sample will be ***EXACTLY*** at the surface of the coverslip, if this is not the case, then you will introduce spherical aberration and degrade your image. A common mistake is to use chambered slides instead of chambered coverslips. Chambered slides have chambers that can be removed and a coverglass placed over the chambers for imaging. The problem with this is that the microscope has to image through thick mounting media which often has mismatched refractive index. Most lenses are designed to image at the coverslip, not far from the coverslip. Therefore, resolution may be degraded. High resolution is compromised. Additionally, high NA lenses have minimal free working distance, e.g. a typical 63X/1.4NA lens has a working distance around 140 micrometers. If the distance from the coverslip to the cells on the slide is more than this distance, the lens will touch the top of the coverslip before the cells are in focus. 
-{{< figure
-    default=true
-    src="goodbad.png"
-    title="Cells on c/s Vs. Cells on slide"
-    width=500
-    >}}
+Some objectives have a correction collar to compensate. Most oil objectives, including those on our systems, do not, so the correct coverslip is essential. (Confirm per objective)
 
+{{< figure default=true src="Objectives.png" title="Objectives are marked with their design coverslip thickness" caption="40x objectives marked 0.17 mm." width=500 >}}
+
+## Coverslip grades
+
+| Number | Thickness (µm) |
+|:--:|:--|
+| #0 | 85–130 |
+| #1 | 130–160 |
+| **#1.5 / #1.5H** | **160–190 (1.5H: 165–175)** |
+| #2 | 190–230 |
+| #3 | 240–350 |
+| #4 | 430–650 |
+
+Buy #1.5H (not "#1.5" without the H) when imaging at high NA, and always check the box label.
+
+## Signal loss
+
+Objectives with NA above about 0.4 lose signal and resolution as coverslip error grows (see the graph below). Even a modest error can matter for 63x/1.4 oil lenses.
+
+{{< figure default=true src="IntensityVsThicknessError.png" title="Intensity vs coverslip thickness error" caption="Source: [Nikon MicroscopyU](https://www.microscopyu.com/microscopy-basics/coverslip-correction)" width=500 >}}
+
+## Imaging cells: use coverslips, not slides
+
+The lens expects your sample to sit **directly against the coverslip**. 
+
+- Grow cells on #1.5H coverslips, or in dishes and chambers with a #1.5H glass bottom, and use an inverted microscope.
+- Avoid imaging through the thick plastic or glass slide base, or through a deep layer of mounting medium whose refractive index does not match. This degrades resolution.
+- High-NA lenses have a short working distance (for a 63x/1.4 oil lens, about 0.14–0.19 mm). If your cells are farther away than this, the lens hits the sample before it focuses.
+
+{{< figure default=true src="goodbad.png" title="Cells on the coverslip (good) vs on the slide (bad)" width=500 >}}
+
+## Checklist
+
+- [ ] #1.5H coverslip
+- [ ] Cells on the coverslip surface facing the lens
+- [ ] Mounting medium suited to the objective (oil, water or glycerol)
+- [ ] Coverslip sealed and cleaned before imaging

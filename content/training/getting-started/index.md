@@ -1,39 +1,74 @@
 +++
-title= "Getting Started"
+title = "Getting Started"
 layout = "simple"
 +++
 
-## Overview
-Getting started imaging with our resources requires:
-- **[An account in Stratocore PPMS](stratocoreIntro.pdf)** --- for booking and billing.
-- **Training** --- so that you don't damage the equipment or yourself.
-- **Physical Access** --- so that you can get into the rooms where the microscopes live.
-- **[A strategy to manage your image data](/protocols/map-network-drive)** --- to keep our acquisition computers from filling up and as a means for you to access your data from anywhere.
+## Before your first session
 
-## PPMS
-Stratocore [PPMS](https://stratocore.com/), our booking and billing system, is a cloud-based management software designed for scientific core facilities and research labs, providing a centralized platform for equipment booking, training, maintenance, billing, and project tracking. The system supports various functions, from managing access to advanced resources to simplifying financial operations and ensuring compliance for researchers and facility staff.
-To use *many* of the shared resource facilities at KCL, you will need an account in the system.
-To access the King's instance of PPMS, please visit this URL: [https://ppms.eu/kcl](https://ppms.eu/kcl). This is the landing page for all the facilities that use PPMS at KCL. Click on the link to the CDN facility to reach our facility and login with your k-number. If you don't have an account, follow [these](RequestingANewInternalUserAccountInStratocore.pdf) directions to obtain one.
-- [Quickstart video for PPMS](StratocoreUserVideo.ppsx)  (This link downloads a powerpoint viedo describing the basics of PPMS)
+To image with us you need four things:
 
-### PPMS Booking Policies
-- You may book 1 week in advance
-- Booking will open at 11:00 on Thursday for the following Monday to Sunday period.
-- Each day, from 08:00 – 20:00, is split into 6 x 2-hour booking slots – bookable sessions are for a minimum of 2 hours. If you straddle two slots **YOU WILL BE CHARGED FOR BOTH**. 
-- Each approved user is entitled to 6 hours (3 x 2-hour sessions) on the scope per week plus one overnight session (from Monday to Friday). You can additionally book a further 4 hours and one overnight session at the weekend if needed and is on a first-come, first-served basis.
- - If you have already used your weekly allowance, you can book extra slots, but only if there are available slots on the day. 
-- Cancellation within 24h of the start of hte booking will incur a charge.
-## Training
-To use any system by yourself, you will require training. Please wait to request training until you have some samples to image. Bring your samples to the training session so that we can use them to personalize your training.  
-To organise training, login to PPMS, and then fill in the ["CDN Microscope Training Request Form"](https://ppms.eu/kcl/req/?pf=4&training=true&form=11) you can find in the *Requests* tab. Once the form is submitted, I will contact you to ask for further details or to arrange a mutually agreeable time for the taining. Training sessions last approximately 1.5h to 2h. After the training, you will be granted access to the booking calendar for that system. 
+1. **A PPMS account** – for booking and billing.
+2. **Training** – on each system you want to use.
+3. **Building access** – on your King's ID card.
+4. **A data plan** – somewhere to move your images after each session.
 
-## Physical Access
-Your ID card can be programmed to allow you into the centre and into the microscope room. After the training, email to the [CDN Technical Services](mailto:cdn-technical-services@kcl.ac.uk) team to request access. Copy [me](mailto:stephen.ogg@kcl.ac.uk) so they know that I have given you the appropriate training. 
+Please complete these in order. Allow [1–2 weeks] from your training request to first independent session.
 
-## Data Management
-An important part of an imaging experiment is data management. Initially acquired image data are saved on the filesystem of the local computer that is directly connected to the microscope. These computers have limited data storage capacity. They have room to store acquired data for ~1 week to 1 month. This estimate is *highly* dependent on the schedule of the specific system. As an upstanding imaging citizen, it is **your** job to transfer your data off the acquisition system, moving it to a location for long-term storage, backup, analysis, and archiving. The *only* way to do this is over the newtork. USB ports have been disabled in the BIOS, preventing users from plugging in USB storage devices to copy their data. This is to prevent any inadvertent transfer of viruses to the acquisition systems.  
-I will not delete your data from the acquisition system for no reason. If someone needs space to acquire their data, however, I will delete data until there is enough space for new data to be acquired. I´ll delete oldest data first, but *without any warning* or notification. This is so important it bears repeating -- **YOU ARE RESPONSIBLE FOR YOUR OWN DATA!!** Please see [this](/protocols/map-network-drive) page to start using a strategy that is implemented by the [e-Research](https://docs.er.kcl.ac.uk/) group at King´s called [RDS](https://docs.er.kcl.ac.uk/research_data/rds/)---Research Data Storage.
-{{< columns >}}
+## 1. PPMS account
+
+PPMS (Stratocore) is our booking, training and billing system.
+
+1. Go to [ppms.eu/kcl](https://ppms.eu/kcl) and select the **CDN** facility.
+2. Log in with your k-number.
+3. No account? Follow the [instructions for requesting an internal account](RequestingANewInternalUserAccountInStratocore.pdf).
+
+Useful: [PPMS introduction (PDF)](stratocoreIntro.pdf) and [PPMS quickstart slides (download, PowerPoint)](StratocoreUserVideo.ppsx).
+
+## 2. Training
+
+You must be trained on a system before you can use it alone.
+
+1. **Prepare samples first.** Request training only when you have samples ready; we use them during the session.
+2. In PPMS, open the **Requests** tab and submit the [CDN Microscope Training Request Form](https://ppms.eu/kcl/req/?pf=4&training=true&form=11).
+3. We will contact you to agree a time. Sessions last 1.5–2 hours.
+4. After training, you are given access to that system's booking calendar.
+
+Read the page for your system and the [Coverslip Thickness](/protocols/coverslip-thickness) page **before** the session.
+
+## 3. Physical access
+
+After training, email [CDN Technical Services](mailto:cdn-technical-services@kcl.ac.uk) to have your ID card programmed for the centre and microscope room, copying [the facility manager](mailto:stephen.ogg@kcl.ac.uk) to confirm your training.
+
+## 4. Booking rules
+
+| Rule | Detail |
+|---|---|
+| Booking window | Next week's calendar (Monday–Sunday) opens **Thursday at 11:00**. |
+| Slots | 08:00–20:00 in six 2-hour slots. Minimum booking: one slot. |
+| Charges | A booking that straddles two slots is **charged for both**. |
+| Weekly allowance | 6 hours (3 slots) plus one overnight session (Monday–Friday). |
+| Extra time | A further 4 hours plus one weekend overnight session may be booked, first come, first served. Beyond your allowance you may book only slots still free on the day. |
+| Cancellation | Cancel at least 24 hours before the start, or you will be charged. |
+
+If you finish early or cancel, please cancel in PPMS so others can use the time.
+
+## 5. Look after your data
+
+**You are responsible for your own data.**
+
+- Images are saved on the system's computer, which has limited space (roughly 1 week to 1 month of use, depending on the system's schedule).
+- If space is needed, the oldest data are deleted **without warning**.
+- USB ports are disabled, to prevent viruses. The only way to copy data is over the network.
+- Our recommended route is King's Research Data Storage (RDS). Follow [Mapping a network drive](/protocols/map-network-drive) to set it up, and request RDS below.
+
 {{< alert icon="play" cardColor=#3b82f6 >}}[Request RDS from e-Research](https://rds-admin.er.kcl.ac.uk/){{< /alert >}}
-{{< column >}}
-{{< endcolumns >}}
+
+Good practice: copy your data **before you leave** and check that the copy opened correctly. Keep raw files unaltered.
+
+## Safety and good practice
+
+- Never look into a laser beam or remove covers or interlocks. STED and confocal systems contain high-power lasers [classes to be confirmed].
+- Wipe up any oil or media spill straight away. Use lens tissue only on objectives.
+- Report any fault, damage or odd behaviour to the team immediately; do not try to fix it.
+- Log out, shut down following the system's procedure, and leave the bench clean.
+- Contact: [Stephen Ogg](mailto:stephen.ogg@kcl.ac.uk). [Out-of-hours / emergency contact to be added.]
